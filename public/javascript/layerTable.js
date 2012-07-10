@@ -624,41 +624,12 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 
 		} catch(err){alert(err + " openRow");};
 	  };
-	  
-	  // handles jsonp response from request for metadata call
-	  this.showMetadataJsonpSuccess = function(data, contextObj)
+	 
+	  // handles html metadata call
+	  this.showMetadata = function(layerId, data)
 	  {
-		  var solrResponse = data["response"];
-    	  var totalResults = solrResponse["numFound"];
-    	  if (totalResults != 1)
-    	  {
-    		  throw new Error("Request for FGDC returned " + totalResults +".  Exactly 1 was expected.");
-    		  return;
-    	  }
-    	  var doc = solrResponse["docs"][0];  // get the first layer object
-    	  var fgdcRawText = doc["FgdcText"];
-    	  var layerId = doc["LayerId"][0];
-    	  var fgdcText = unescape(fgdcRawText);  // text was escaped on ingest into Solr
-    	  var fgdcDocument = jQuery.parseXML(fgdcText);
-    	  var xsl = null;
-    	  var params = {
-    			  url: "FGDC_Classic_for_Web_body.xsl",
-    			  async: false,
-    			  context: contextObj,
-    			  dataType: 'xml',
-    			  success: function(data){xsl = data;}
-    	  };
-    	  jQuery.ajax(params);
-    	  var resultDocument = "";
-    	  if (xsl != null){
-    		  if (jQuery.browser.msie){
-    			  resultDocument=fgdcDocument.transformNode(xsl);
-    		  } else {
-    			  var xsltProcessor = new XSLTProcessor();
-    			  xsltProcessor.importStylesheet(xsl);
-    			  resultDocument = xsltProcessor.transformToFragment(fgdcDocument, document);
-    		  }
-    	  }
+          m = data;
+          resultDocument = data;
     	  if (typeof jQuery('#metadataDialog')[0] == 'undefined'){
     		  var dialogDiv = '<div id="metadataDialog" class="dialog"> \n';
     		  dialogDiv += '</div> \n';
@@ -683,7 +654,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
   			}
     		});
     	  jQuery("#metadataDownloadButton").unbind();
-    	  var iframeSource = "getMetadata?download=true&id=" + layerId;
+    	  var iframeSource = "getMetadata.xml?download=true&id=" + layerId;
     	  var downloadFunction = function(){
         	  if (typeof jQuery('#metadataDownloadIframe')[0] == 'undefined'){
         		  var downloadIframe = '<iframe id="metadataDownloadIframe" src="' + iframeSource + '"> \n';
@@ -724,9 +695,15 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
           var aData = tableObj.fnGetData(aPos);
           //make an ajax call to retrieve metadata
           var layerId = aData[this.tableHeadingsObj.getColumnIndex("LayerId")];
-          var solr = new org.OpenGeoPortal.Solr();
-      	  var query = solr.getMetadataQuery(layerId);
-      	  solr.sendToSolr(query, this.showMetadataJsonpSuccess, this.showMetadataJsonpError, this);
+    	  var params = {
+            url: "getMetadata.html?download=true&id=" + layerId,
+            success: function(data, contextObj) {
+                this.showMetadata(layerId, data)
+            },
+            error: this.showMetadataJsonpError,
+            context: this
+    	  };
+    	  jQuery.ajax(params);
 	  };	
 	  
 	  
@@ -2457,4 +2434,5 @@ org.OpenGeoPortal.LayerSettings = function(){
 		}
 	};
 };
-         
+        
+m = ''; 
