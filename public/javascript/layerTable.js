@@ -628,7 +628,6 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 	  // handles html metadata call
 	  this.showMetadata = function(layerId, data)
 	  {
-          m = data;
           resultDocument = data;
     	  if (typeof jQuery('#metadataDialog')[0] == 'undefined'){
     		  var dialogDiv = '<div id="metadataDialog" class="dialog"> \n';
@@ -2435,4 +2434,3 @@ org.OpenGeoPortal.LayerSettings = function(){
 	};
 };
         
-m = ''; 
