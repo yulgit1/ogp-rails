@@ -13,11 +13,12 @@ database-backed web applications according to the Model-View-Control pattern.
 
 Install the gems and pull the submodules
 
-bundle install
-git submodule init
-git submodule update
+  bundle install
+  git submodule init
+  git submodule update
 
-rails s
+Run server:
+  rails s
 
 == Console
 
