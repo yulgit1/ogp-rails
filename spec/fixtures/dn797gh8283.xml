@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<add>
+  <doc>
+    <field name="Access">Public</field>
+    <field name="Availability">Online</field>
+    <field name="FgdcText">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;metadata xmlns:geonet="http://www.fao.org/geonetwork" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.fgdc.gov/schemas/metadata/fgdc-std-001-1998.xsd"&gt;
+  &lt;idinfo&gt;
+    &lt;citation&gt;
+      &lt;citeinfo&gt;
+        &lt;origin&gt;Originally developed by Teale Data Center GIS Lab;  updated by California Air Resources Board, Planning and Technical Support Division.&lt;/origin&gt;
+        &lt;pubdate/&gt;
+        &lt;title&gt;California Air Resources Board Air Basins&lt;/title&gt;
+        &lt;geoform&gt;vector digital data&lt;/geoform&gt;
+        &lt;onlink&gt;http://gis.ca.gov/casil/boundaries/arb/&lt;/onlink&gt;
+      &lt;/citeinfo&gt;
+    &lt;/citation&gt;
+    &lt;descript&gt;
+      &lt;abstract&gt;Air Resources
+California Air Resources Board
+
+The following datasets are from the California Air Resources Board:
+
+    * fed_1hr_coabdis - Federal one-hour ozone designations
+
+The federal one-hour ozone designations layer is a polygon coverage showing area designations and their classifications as per 40CFR81.305. There are three designation categories: nonattainment, unclassifiable/attainment and attainment areas. Nonattainment areas have various classifications. Each designation and classification area has an associated date field that represents the "effective" date of the action as published in 40CFR81.305. This data layer is current as of November 2003. Projection: Teale Albers, NAD83, GRS 1980
+
+Designation areas are defined pursuant to the corresponding federal national ambient air quality standard for each pollutant as per the Clean Air Act.
+
+    * fed_pm10_coabbdis - federal PM10 designations
+
+The federal PM10 designations layer is a polygon coverage showing area designations and their classifications as per 40CFR81.305. There are three designation categories: nonattainment, unclassifiable and attainment areas. Nonattainment areas have various classifications. Each designation and classification area has an associated date field that represents the "effective" date of the action as published in 40CFR81.305. This data layer is current as of November 2003. Projection: Teale Albers, NAD83, GRS 1980
+
+Designation areas are defined pursuant to the corresponding federal national ambient air quality standard for each pollutant as per the Clean Air Act.
+Used the coabdis layer as based - Tess corrected E.Kern nonattainment area to reflect original boundary line, which crosses into Indian Wells 1/20/04 merged SSAB and MDAB to make Southeast Desert Air Basin - only for federal designation maps made minor correction to Coachella Valley southeast corner - little watershed line used latest 10-9-03 published boundary CFR designations including moving Banning pass to South Coast AB
+
+    * fed_so2_co_no2_coabdis - Federal NO2, SO2, CO designations
+
+The federal NO2, SO2, CO designations layer is a polygon coverage providing area designations as per 40CFR81.305. There are three designation categories: nonattainment, unclassifiable and attainment areas. This data layer is current as of November 2003. Projection: Teale Albers, NAD83, GRS 1980
+
+Designation areas are defined pursuant to the corresponding federal national ambient air quality standard for each pollutant as per the Clean Air Act.&lt;/abstract&gt;
+    &lt;/descript&gt;
+    &lt;timeperd&gt;
+      &lt;timeinfo&gt;
+        &lt;sngdate&gt;
+          &lt;caldate/&gt;
+        &lt;/sngdate&gt;
+      &lt;/timeinfo&gt;
+      &lt;current&gt;publication date&lt;/current&gt;
+    &lt;/timeperd&gt;
+    &lt;status&gt;
+      &lt;progress&gt;Complete&lt;/progress&gt;
+      &lt;update&gt;As needed&lt;/update&gt;
+    &lt;/status&gt;
+    &lt;spdom&gt;
+      &lt;bounding&gt;
+        &lt;westbc&gt;-124.504865&lt;/westbc&gt;
+        &lt;eastbc&gt;-113.497796&lt;/eastbc&gt;
+        &lt;northbc&gt;42.069056&lt;/northbc&gt;
+        &lt;southbc&gt;32.423438&lt;/southbc&gt;
+      &lt;/bounding&gt;
+    &lt;/spdom&gt;
+    &lt;keywords&gt;
+      &lt;theme/&gt;
+    &lt;/keywords&gt;
+    &lt;accconst&gt;None.&lt;/accconst&gt;
+    &lt;useconst&gt;None.&lt;/useconst&gt;
+    &lt;ptcontac&gt;
+      &lt;cntinfo&gt;
+        &lt;cntorgp&gt;
+          &lt;cntorg&gt;California Air Resources Board; Planning and Technical Support Division&lt;/cntorg&gt;
+        &lt;/cntorgp&gt;
+        &lt;cntaddr&gt;
+          &lt;addrtype&gt;mailing address&lt;/addrtype&gt;
+          &lt;address&gt;P.O. Box 2815&lt;/address&gt;
+          &lt;city&gt;Sacramento&lt;/city&gt;
+          &lt;state&gt;CA&lt;/state&gt;
+          &lt;postal&gt;95812&lt;/postal&gt;
+          &lt;country&gt;USA&lt;/country&gt;
+        &lt;/cntaddr&gt;
+      &lt;/cntinfo&gt;
+    &lt;/ptcontac&gt;
+    &lt;native&gt;Microsoft Windows 2000 Version 5.1 (Build 2600) Service Pack 1; ESRI ArcCatalog 8.3.0.800&lt;/native&gt;
+  &lt;/idinfo&gt;
+  &lt;spdoinfo&gt;
+    &lt;direct&gt;Vector&lt;/direct&gt;
+    &lt;ptvctinf&gt;
+      &lt;sdtsterm&gt;
+        &lt;sdtstype&gt;G-polygon&lt;/sdtstype&gt;
+        &lt;ptvctcnt&gt;34&lt;/ptvctcnt&gt;
+      &lt;/sdtsterm&gt;
+    &lt;/ptvctinf&gt;
+  &lt;/spdoinfo&gt;
+  &lt;spref&gt;
+    &lt;horizsys&gt;
+      &lt;planar&gt;
+        &lt;mapproj&gt;
+          &lt;mapprojn&gt;Albers Conical Equal Area&lt;/mapprojn&gt;
+          &lt;albers&gt;
+            &lt;stdparll&gt;34.000000&lt;/stdparll&gt;
+            &lt;stdparll&gt;40.500000&lt;/stdparll&gt;
+            &lt;longcm&gt;-120.000000&lt;/longcm&gt;
+            &lt;feast&gt;0.000000&lt;/feast&gt;
+            &lt;fnorth&gt;-4000000.000000&lt;/fnorth&gt;
+          &lt;/albers&gt;
+        &lt;/mapproj&gt;
+        &lt;planci&gt;
+          &lt;plance&gt;coordinate pair&lt;/plance&gt;
+          &lt;coordrep&gt;
+            &lt;absres&gt;0.002048&lt;/absres&gt;
+            &lt;ordres&gt;0.002048&lt;/ordres&gt;
+          &lt;/coordrep&gt;
+          &lt;plandu&gt;meters&lt;/plandu&gt;
+        &lt;/planci&gt;
+      &lt;/planar&gt;
+      &lt;geodetic&gt;
+        &lt;horizdn&gt;North American Datum of 1983&lt;/horizdn&gt;
+        &lt;ellips&gt;GRS 1980&lt;/ellips&gt;
+        &lt;semiaxis&gt;6378137.000000&lt;/semiaxis&gt;
+        &lt;denflat&gt;298.257222101&lt;/denflat&gt;
+      &lt;/geodetic&gt;
+    &lt;/horizsys&gt;
+  &lt;/spref&gt;
+  &lt;eainfo/&gt;
+  &lt;distinfo&gt;
+    &lt;resdesc&gt;Downloadable Data&lt;/resdesc&gt;
+    &lt;stdorder&gt;
+      &lt;digform&gt;
+        &lt;digtinfo&gt;
+          &lt;transize&gt;2.558&lt;/transize&gt;
+        &lt;/digtinfo&gt;
+      &lt;/digform&gt;
+    &lt;/stdorder&gt;
+  &lt;/distinfo&gt;
+  &lt;metainfo&gt;
+    &lt;metd&gt;20040622&lt;/metd&gt;
+    &lt;metc&gt;
+      &lt;cntinfo&gt;
+        &lt;cntperp&gt;
+          &lt;cntper&gt;Beth Schwehr&lt;/cntper&gt;
+          &lt;cntorg&gt;California Air Resources Board; Planning and Technical Support Division&lt;/cntorg&gt;
+        &lt;/cntperp&gt;
+        &lt;cntpos&gt;Staff Air Pollution Specialist&lt;/cntpos&gt;
+        &lt;cntaddr&gt;
+          &lt;addrtype&gt;mailing address&lt;/addrtype&gt;
+          &lt;address&gt;P.O. Box 2815&lt;/address&gt;
+          &lt;city&gt;Sacramento&lt;/city&gt;
+          &lt;state&gt;CA&lt;/state&gt;
+          &lt;postal&gt;95812&lt;/postal&gt;
+          &lt;country&gt;USA&lt;/country&gt;
+        &lt;/cntaddr&gt;
+        &lt;cntvoice&gt;(916) 322-6002&lt;/cntvoice&gt;
+        &lt;cntemail&gt;bschwehr@arb.ca.gov&lt;/cntemail&gt;
+      &lt;/cntinfo&gt;
+    &lt;/metc&gt;
+    &lt;metstdn&gt;FGDC Content Standards for Digital Geospatial Metadata&lt;/metstdn&gt;
+    &lt;metstdv&gt;FGDC-STD-001-1998&lt;/metstdv&gt;
+    &lt;mettc&gt;local time&lt;/mettc&gt;
+    &lt;metextns&gt;
+      &lt;onlink&gt;http://www.esri.com/metadata/esriprof80.html&lt;/onlink&gt;
+      &lt;metprof&gt;ESRI Metadata Profile&lt;/metprof&gt;
+    &lt;/metextns&gt;
+  &lt;/metainfo&gt;
+  &lt;Esri&gt;
+    &lt;ModDate&gt;20081117&lt;/ModDate&gt;
+    &lt;ModTime&gt;18024100&lt;/ModTime&gt;
+    &lt;CreaDate&gt;20120503&lt;/CreaDate&gt;
+    &lt;CreaTime&gt;12550400&lt;/CreaTime&gt;
+    &lt;SyncOnce&gt;TRUE&lt;/SyncOnce&gt;
+    &lt;DataProperties&gt;
+      &lt;itemProps&gt;
+        &lt;itemLocation&gt;
+          &lt;linkage Sync="TRUE"&gt;file://\\sul-koala\GIS_Shared\GIS_Lab\OGP_data_4Renzo\Federal_designation_ozone_pm10_so2_co_no2_&lt;/linkage&gt;
+          &lt;protocol Sync="TRUE"&gt;Local Area Network&lt;/protocol&gt;
+        &lt;/itemLocation&gt;
+      &lt;/itemProps&gt;
+      &lt;copyHistory&gt;
+        &lt;copy source="E:\Users\davidmed\Downloads\Federal_designation_ozone_pm10_so2_co_no2_" dest="\\sul-koala\GIS_Shared\GIS_Lab\OGP_data_4Renzo\Federal_designation_ozone_pm10_so2_co_no2_" date="20120503" time="12550400"/&gt;
+      &lt;/copyHistory&gt;
+    &lt;/DataProperties&gt;
+  &lt;/Esri&gt;
+  &lt;mdDateSt Sync="TRUE"&gt;20081117&lt;/mdDateSt&gt;
+&lt;/metadata&gt;</field>
+    <field name="CollectionId">Stanford Public</field>
+    <field name="ContentDate">2012-01-01T01:01:01Z</field>
+    <field name="DataType">Polygon</field>
+    <field name="GeoReferenced">true</field>
+    <field name="Institution">Stanford</field>
+    <field name="LayerDisplayName">California Air Resources - Federal NO2, SO2, CO designations</field>
+    <field name="LayerId">dn797gh8283</field>
+    <field name="Location">{"wms": ["http://kurma-test.stanford.edu/geoserver/stanford/wms"], "tilecache" : ["http://kurma-test.stanford.edu:80/geoserver/gwc/service/wms"], "servicesStart": [], "wfs": "http://kurma-test.stanford.edu/geoserver/stanford/wfs"}</field>
+    <field name="CenterX">0.0</field>
+    <field name="CenterY">0.0</field>
+    <field name="MinX">-124.40959631801789</field>
+    <field name="MaxY">42.00983482767877</field>
+    <field name="MaxX">-114.1314726664246</field>
+    <field name="MinY">32.534028169213464</field>
+    <field name="Name">dn797gh8283</field>
+    <field name="Originator">SULAIR</field>
+    <field name="Publisher">SULAIR</field>
+    <field name="SrsProjectionCode">4326</field>
+    <field name="WorkspaceName">stanford</field>
+  </doc>
+</add>

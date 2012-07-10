@@ -1,0 +1,15 @@
+development: 
+  servicePort: 3000
+  serviceProxyAddress: http://localhost:8983/solr/
+  serviceAddress: http://localhost:8983
+  serviceType: solr
+test: 
+  servicePort: 8983
+  serviceProxyAddress: 
+  serviceAddress: http://localhost:8983/solr/
+  serviceType: solr
+production: 
+  servicePort: 8983
+  serviceProxyAddress:
+  serviceAddress: http://ogpsolr.stanford.edu:8983/solr/
+  serviceType: solr

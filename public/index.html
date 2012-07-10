@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeoData@Stanford</title>
+<!--script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>-->
+<link rel="stylesheet" href="javascript/openlayers/OpenLayers-2.11/theme/default/style.css" type="text/css" />
+<link rel="stylesheet" href="javascript/openlayers/OpenLayers-2.11/theme/default/google.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui-1.8.2.custom.css" type="text/css" />
+<link rel="stylesheet" href="css/structure.css" type="text/css" />
+<link rel="stylesheet" href="css/mapDiv.css" type="text/css" />
+<link rel="stylesheet" href="css/dataTable.css" type="text/css" />
+<!--<link rel="stylesheet" href="css/institution.css" type="text/css" />-->
+<link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
+<link rel="stylesheet" type="text/css" href="css/sulair-footer.css" />
+<!--
+-->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&sensor=false"></script>
+<!--
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDg_fCEEXrp02riUN_X1YtfR3PDcaGHi28&sensor=false"></script>
+-->
+<script type="text/javascript" src="javascript/openlayers/OpenLayers-2.11/OpenLayers.js"></script>
+<script type="text/javascript" src="javascript/jquery/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="javascript/DataTables/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="javascript/jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="javascript/jquery.scrollTo-min.js"></script>
+<script type="text/javascript" src="javascript/jquery.ba-resize.js"></script>
+<script type="text/javascript" src="javascript/panZoom.js"></script>
+<script type="text/javascript" src="javascript/institution.js"></script>
+<script type="text/javascript" src="javascript/errorObject.js"></script>
+<script type="text/javascript" src="javascript/utility.js"></script>
+<script type="text/javascript" src="javascript/mapDiv.js"></script>
+<script type="text/javascript" src="javascript/layerTable.js"></script>
+<script type="text/javascript" src="javascript/userInterface.js"></script>
+<script type="text/javascript" src="javascript/main.js"></script>
+<script type="text/javascript" src="javascript/solr.js"></script>
+<!--
+<script type="text/javascript" src="javascript/geoCommonsExport.js"></script>
+-->
+<!-- <script type="text/javascript" src="javascript/testOverviewMap.js"></script>-->
+<!-- We should move to using a cdn where possible with a locally hosted fallback -->
+<!--
+<script type="text/javascript">
+var fallbackURL = "javascript/jquery/js/jquery-1.6.4.min.js";
+if (typeof jQuery == 'undefined') {
+    document.write("<script src=\"" + fallbackURL + "\" type = \"text/javascript\"></" + "script>");
+}
+</script>
+-->
+
+
+</head>
+<body>
+<div class="site-wrapper">
+<div id="main" >
+  <div id="header"> 
+  <div id="logo" onclick="location.href='index.html'">
+  </div>
+  <div id="top_menu"> 
+    <a href="">Reset</a> &nbsp;&nbsp;&nbsp;
+    <span id="userGuideLink" class="infoLinks">User Guide</span> 
+     &nbsp;&nbsp;&nbsp;
+    <span id="highlightsLink" class="infoLinks">Highlights</span> 
+     &nbsp;&nbsp;&nbsp;
+    <span id="headerLogin" class="infoLinks login">Login</span>
+      <div id="welcome">Welcome!</div>
+    </div>
+</div> 
+  <div id="menu"> 
+    <div id="map_tabs"> 
+      <span class="styledButton" title="Save map image" onclick="org.OpenGeoPortal.ui.saveImage();">Save Image</span>
+      <span class="styledButton" title="Print map" onclick="org.OpenGeoPortal.ui.printImage();">Print</span>
+      <div id="basemapDropdown">
+        <button id="basemapSelect" class="styledButton" title="Select base map"><span>Basemap<img src="media/arrow_down.png" alt="Select base map" /></span></button>
+        <div id="basemapMenu">
+        </div>
+      </div>
+    </div>  
+  </div>
+  <div id="container">
+    <div id="roll_right" class="arrow_buttons"><img src="media/button_arrow_right.png" class="button" /></div>
+    <div id="left_col">
+      <div id="left_tabs"> 
+  <div id="tabs" class="ui-tabs">
+    <ul>
+      <li><a href="#gettingStartedTab"><span class="tabText">
+        Getting Started
+        </span></a> 
+      </li>
+      <li><a href="#searchTab"><span class="tabText">
+        Search
+        </span></a> 
+      </li>       
+      <li><a href="#savedLayersTab">
+        <span class="tabText">
+        <img src="media/shoppingcart.png" alt="Cart" />
+        Cart <span id="savedLayersNumberTab" class="savedLayersNumber">(0)</span>
+        </span></a> 
+      </li>
+    </ul>
+      <div id="gettingStartedTab" class="ui-tabs-hide">
+      <div id="home_text" class="welcomeText">
+  <h1><!-- This text appears in the search results area on page load and also at the top of
+the 'Getting Started' tab-->
+Welcome to the Stanford Geospatial Data Repository 
+</h1>
+  <p>
+  Search, discover, preview, and retrieve geospatial data from multiple repositories
+  </p> 
+
+    <h2>Search</h2> 
+    <p>There are two ways to search for data. The two methods can be used individually or combined for more effective search</p>
+    <ul>  
+      <li>Use <span style="font-weight:bold">basic</span> or <span style="font-weight:bold">advanced</span> search</li> 
+      <li>Interact with the map to search for data by relevant geographic extent</li>    
+    </ul> 
+    <h2>Interacting with the map  </h2>  
+    <ul> 
+        <li>Interacting with the map will perform a search for relevant data</li> 
+        <li>Enter a place in the <span style="font-weight:bold">Find Place</span> field to zoom to a location</li> 
+        <li>Click the <span style="font-weight:bold">Zoom</span> or <span style="font-weight:bold">Pan</span> tool and drag the map with the mouse</li> 
+        <li>Double-click to zoom in on an area</li>
+        <li>Hold down shift and click-drag a box to zoom to an area</li>
+        <li>Click on <span style="font-weight:bold">Basemap</span> to set the background layer to OpenStreetMap, Google Maps, etc.</li>
+    </ul> 
+    <h2>Preview</h2>
+    <ul>
+      <li>Click the <span style="font-weight:bold">Preview</span> checkbox to preview the layer on the map from your search results or from your Cart</li>
+      <li>Expand the layer dropdown to access the preview controls</li>
+      <li>Click the attribute preview tool <span><img src="media/preview.gif"/></span> and click on a feature on the map to view its attributes</li>
+    </ul> 
+    <h2>Download</h2>
+  <ul>
+    <li>Click the <span style="font-weight:bold">Cart</span> checkbox to add the selected layer to your Cart for download, additional preview, or to create web mapping services</li>
+  </ul> 
+</div> 
+
+
+      </div>
+      <div id="searchTab" class="ui-tabs-hide">
+      <div id="basicSearchDiv">
+  <div class="sub_header">
+      <span class="sub_headerTitle">
+        SEARCH
+        <!--<img src="media/header_search.png" alt="Search" />-->
+      </span>
+    <div class="arrow_buttons">
+        <img src="media/button_arrow_up.png" class="button" alt="collapse" />
+        <img src="media/button_arrow_left.png" class="button" alt="collapse left" />
+        <img src="media/button_arrow_right.png" class="button" alt="expand right" />
+    </div>
+  </div>
+    
+    <div class="searchBox">
+      <div id="basicSearchBox">  
+  <form id="basicSearchForm" onsubmit="return false;">
+    <div>
+      <input id="basicSearchTextField" name="basicSearchTextField" type="text" />
+      <span id="basicSearchSubmit" class="styledButtonSmall" onclick="org.OpenGeoPortal.ui.searchSubmit()">Search</span>
+      </div>
+      <div id="basicSearchMapFilterContainer">
+        <input type="checkbox" name="mapFilterCheck" id="basicSearchMapFilter" class="mapFilterFlag" onclick="org.OpenGeoPortal.ui.mapFilterStatus(this)" value="on" checked="checked" />
+        <label for="basicSearchMapFilter">Limit results to visible map area</label>
+      </div>
+    <span id="moreSearchOptions" class="searchToggle button" onclick="org.OpenGeoPortal.ui.toggleSearch(this)">advanced options</span>
+    </form>
+</div>
+ 
+         <!-- topic keywords come from http://gcmd.nasa.gov/User/difguide/iso_topics.html  -->
+ <div id="advancedSearchBox">
+    <form id="advancedSearchForm" onsubmit="return false;">
+      <div class="searchFormRow">
+          <label class="searchFormLabel">Topic:</label>
+        <div id="topicDropdown" class="searchFormInput">
+          </div>
+        <!--<span class="searchFormLabel">Topic:</span>
+        <select name="advancedSelectTopic" id="advancedSelectTopic" class="selectTopic searchFormInput">
+                <option>Select a topic (optional)</option>
+                <option value="farming">Agriculture and Farming</option>
+            <option value="biota">Biology and Ecology</option>
+            <option value="boundaries">Administrative and Political Boundaries</option>
+            <option value="climatologyMeteorologyAtmosphere">Atmospheric and Climatic</option>
+            <option value="economy">Business and Economic</option>
+            <option value="elevation">Elevation and Derived Products</option>
+            <option value="environment">Environment and Conservation</option>
+            <option value="geoscientificinformation">Geological and Geophysical</option>
+            <option value="health">Human Health and Disease</option>
+            <option value="imageryBaseMapsEarthCover">Imagery and Base Maps</option>
+            <option value="intelligenceMilitary">Military</option>
+            <option value="inlandWaters">Inland Water Resources</option>
+            <option value="location">Locations and Geodetic Networks</option>
+            <option value="oceans">Oceans and Estuaries</option>
+            <option value="planningCadastre">Cadastral</option>
+            <option value="society">Cultural, Society, and Demographics</option>
+            <option value="structure">Facilities and Structure</option>
+            <option value="transportation">Transportation Networks</option>
+            <option value="utilitiesCommunications">Utilities and Communication</option>
+        </select>-->
+      </div>
+    <div class="searchFormRow">
+        <label for="advancedKeywordText" class="searchFormLabel">Keyword(s):</label>
+        <input name="advancedKeywordText" type="text" class="searchFormInput" id="advancedKeywordText"/>
+      </div>
+      <div class="searchFormRow">
+        <label for="advancedOriginatorText" class="searchFormLabel">Originator:</label>           
+        <input name="advancedOriginatorText" type="text" class="searchFormInput" id="advancedOriginatorText"/>
+    </div>
+    <div class="searchFormRow">
+        <label for="advancedDateFromText" class="searchFormLabel">Year(s):</label>
+        <span class="searchFormInput">
+          <input name="advancedDateFromText" type="text" id="advancedDateFromText" size="4" />
+            to 
+            <input name="advancedDateToText" type="text" id="advancedDateToText" size="4" />
+          </span>
+        </div>
+        <div class="searchFormRow">
+        <label class="searchFormLabel">Data Type:</label>     
+        <div id="dataTypeDropdown" class="styledDropdown searchFormInput">
+          </div>
+      </div>
+      <!--<div>-->
+        <div class="searchFormRow">
+            <label class="searchFormLabel">Data Repository:</label>
+          <div id="sourceDropdown" class="searchFormInput">
+            </div>
+          </div>
+        <!--</div>-->
+        <div class="searchFormRow">
+            <span class="searchFormLabel"><!-- spacer --></span>
+        <span class="formCheckbox searchFormInput">
+          <input type="checkbox" name="restrictedCheck" id="restrictedCheck" />
+          <label for="restrictedCheck">Include Restricted Data</label>
+        </span>
+      </div>
+      <div class="searchFormRow advancedSearchButtons">
+        <span id="advancedSearchClear" class="styledButtonSmall" onclick="org.OpenGeoPortal.ui.clearInput('advancedSearchForm')">Clear</span>
+        <span id="advancedSearchSubmit" class="styledButtonSmall" onclick="org.OpenGeoPortal.ui.searchSubmit()">Search</span>
+      </div>
+      <div class="searchFormRow">     
+        <input type="checkbox" name="mapFilterCheck2" id="mapFilterCheck2" class="mapFilterFlag" onclick="org.OpenGeoPortal.ui.mapFilterStatus(this)" value="on" checked="checked" />
+        <label for="mapFilterCheck2">Limit results to visible map area</label>
+        <span id="lessSearchOptions" class="searchToggle button" onclick="org.OpenGeoPortal.ui.toggleSearch(this)">basic options</span>
+      </div>
+  </form>
+</div>
+ 
+   </div>
+   
+  <div id="resultsSubHeader" class="sub_header"> 
+    <span class="sub_headerTitle">
+        <span id="resultsNumber" class="resultsNumber">
+          0
+        </span>
+
+      RESULTS
+        <!--<img src="media/header_searchresults.png" alt="Search Results" /> -->
+      </span>
+
+      <span id="sortDropdownLabel">by</span>
+      <div id="sortDropdown">
+        </div>
+      <!--<span class="sub_headerButtons">--> 
+        <div id="columnDropdown">
+        columns
+      </div>
+      <!--  
+        <span class="mapClearButton styledButtonSmall" title="Clear all layers from the map" >
+        clear map
+      </span>
+      
+    </span>-->
+  </div>
+  <div id="welcomeTextSearchTab" class="welcomeText">
+  <h1><!-- This text appears in the search results area on page load and also at the top of
+the 'Getting Started' tab-->
+Welcome to the Stanford Geospatial Data Repository 
+</h1>
+  <p>
+  Enter a keyword and/or interact with the map to discover geospatial data
+  </p> 
+</div> 
+  <div id="resultsTable"></div>
+  <div id="searchResultsMessage"></div>
+  <div id="searchResultsNavigation"></div>
+
+</div>
+
+
+
+      </div>
+      <div id="savedLayersTab" class="ui-tabs-hide">
+      <div id="savedLayersDiv">
+  <div class="sub_header">
+      <span class="sub_headerTitle">
+      OPTIONS
+      </span>
+    <div class="arrow_buttons">
+        <img src="media/button_arrow_left.png" class="button" alt="collapse left" />
+        <img src="media/button_arrow_right.png" class="button" alt="expand right" />
+    </div>
+  </div>
+  <div id="savedLayersOptions">
+    <span id="downloadButton" class="styledButton">Download</span>
+    <span id="webServiceButton" class="styledButton">Web Service</span>
+    <span id="shareButton" class="styledButton">Share</span>
+    <span id="mapItButton" class="styledButton">Map It</span>
+    <div id="optionDetails"></div>
+  </div> 
+  <div class="sub_header">
+    <span class="sub_headerTitle">
+    LAYERS
+    </span>
+
+    <span class="savedLayersNumber"></span>
+    <span class="sub_headerButtons">  
+    
+      <span id="removeFromCartButton" class="deleteButton styledButtonSmall" title="Remove selected layers from the cart">
+        Remove
+      </span>
+      <!--<span class="organizeButton styledButtonSmall" onclick="org.OpenGeoPortal.ui.openOrganize(this);" title="Show options for sorting and organizing search results">
+        sort options
+      </span>
+        <span id="cartClearMap" class="mapClearButton styledButtonSmall" title="Clear all layers from the map" >
+        clear map
+      </span>-->
+    </span>
+  </div>
+  <div id="savedLayersTable"></div>
+</div>
+      </div>
+  </div>
+</div>  
+
+  
+
+    </div>
+    <div id="map">
+      <div id="mapToolBar">
+    <!--<div id="mapClearButton" class="button ui-button" title="Clear all layers from the map" >
+      clear map
+  </div>-->
+  <div id="mapLoadIndicator" class="loadIndicator"></div>
+</div>  
+<div class="ui-widget" id="geosearchDiv">
+  <input id="geosearch" />
+  <div class="button ui-button" id="goButton">go</div>
+</div>
+<div id="geoportalMap"></div>
+    
+    </div>
+  </div>
+
+
+
+<div id="copyright-footer" role="contentinfo" class="clearfix">
+  <div class="region region-copyright-footer">
+  <section id="block-block-1" class="block block-block">
+
+      
+  <div class="content">
+    <div id="footer-links">
+	<a href="http://www.stanford.edu" class="ext">Stanford University Home</a><span class="ext"></span> <a href="http://visit.stanford.edu/plan/maps.html" class="ext">Maps &amp; Directions</a><span class="ext"></span> <a href="http://www.stanford.edu/search/" class="ext">Search Stanford</a><span class="ext"></span> <a href="http://www.stanford.edu/site/terms.html" class="ext">Terms of Use</a><span class="ext"></span> <a href="http://www.stanford.edu/site/copyright.html" class="ext">Copyright Complaints</a><span class="ext"></span><br><span class="copyright-statement">© Stanford University, Stanford, California 94305. (650) 723-2300</span>
+</div>
+  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</div>
+
+
+</div>
+<div id="about" class="dialog infoDialog">
+  <p>
+  GeoData@Stanford is developed and maintained by Stanford Digital Library Systems and Services. 
+  GeoData@Stanford combines an intuitive, map-based search interface along with traditional 
+  text-based metadata search tools for rapid data discovery and for use in teaching, learning, and research.
+  </p>
+  <p>
+  GeoData@Stanford is part of <a href="http://www.opengeoportal.org">The Open Geoportal</a>. The Open Geoportal is a consortium comprised of contributions 
+  of several universities and organizations to help facilitate the discovery and acquisition of geospatial data across many organizations and platforms. 
+  Current partners include: Harvard, MIT, MassGIS, Princeton, Columbia, Stanford, UC Berkeley, UCLA, Yale, and UConn. Built on open source technology, 
+  The Open Geoportal provides organizations the opportunity to share thousands of geospatial data layers, maps, metadata, and development resources through 
+  a single common interface.
+  </p>
+  <p>
+      <span class="geodataContact">For questions, comments, or to report problems, please contact: <a href="mailto:renzo@stanford.edu">renzo@stanford.edu</a></span> 
+  </p>
+</div> 
+<div id="contact" class="dialog infoDialog">
+  <p>
+    <span class="geodataContact">For questions, comments, or to report problems, please contact: <a href="mailto:renzo@stanford.edu">renzo@stanford.edu</a></span> 
+  </p>
+
+  <div>
+    <h3>Project Management:</h3>
+    Julie Sweetkind-Singer
+  </div>
+
+  <div id="contactLogos"> 
+    <div class="gisLogo" title="GIS@Stanford" onclick="location.href='http://gis.stanford.edu/'">
+    </div>
+    <div class="itLogo" title="UIT" onclick="location.href='http://its.stanford.edu/'">
+    </div>
+  </div>
+</div>
+ 
+<div id="highlights" class="dialog infoDialog">
+  <p>Welcome to GeoData@Stanford!  We are exited to demonstrate the capabilities of our upcoming web geo portal.
+  </p>
+  <p>
+  Please zoom in and pan around with the map and/or enter search terms to begin discovering our geospatial data holdings.
+  </p>
+</div> 
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7439030-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+== Welcome to OpenGeoPortal Rails! 
+
+OpenGeoPortal (OpenGeoportal.org) is a new group of geospatial professionals, developers, and librarians working together on a collaboratively developed, open source, federated web application to discover, preview, and retrieve geospatial data.  It is also a collaborative effort to share resources and best practices in the areas of application development, metadata, data sharing, data licensing, and data sources.  Please contact Patrick.Florance@Tufts.edu for more information.
+
+The official project’s application is written in Java (JSP) and the code repository is hosted on Google Code. 
+This is a Rails implementation of the basic functionality given by the Java application.  
+
+Rails is a web-application framework that includes everything needed to create
+database-backed web applications according to the Model-View-Control pattern.
+
+
+== Getting Started
+
+Install the gems and pull the submodules
+
+bundle install
+git submodule init
+git submodule update
+
+rails s
+
+== Console
+
+The console is a Ruby shell, which allows you to interact with your
+application's domain model. Here you'll have all parts of the application
+configured, just like it is when the application is running. You can inspect
+domain models, change values, and save to the database. Starting the script
+without arguments will launch it in the development environment.
+
+To start the console, run <tt>rails console</tt> from the application
+directory.
+
+Options:
+
+* Passing the <tt>-s, --sandbox</tt> argument will rollback any modifications
+  made to the database.
+* Passing an environment name as an argument will load the corresponding
+  environment. Example: <tt>rails console production</tt>.
+
+To reload your controllers and models after launching the console run
+<tt>reload!</tt>
+
+More information about irb can be found at:
+link:http://www.rubycentral.org/pickaxe/irb.html
+
+
+== Contributors
+Renzo Sanchez-Silva <renzo@stanford.edu>.
+
+== License 
+
+Copyright (c) 2012 Stanford University Libraries 
+
+Licensed under the {MIT License}[http://www.opensource.org/licenses/MIT].

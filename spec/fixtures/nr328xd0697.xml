@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<add>
+  <doc>
+    <field name="Access">Public</field>
+    <field name="Availability">Online</field>
+    <field name="FgdcText">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;metadata xmlns:geonet="http://www.fao.org/geonetwork" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.fgdc.gov/schemas/metadata/fgdc-std-001-1998.xsd"&gt;
+  &lt;idinfo&gt;
+    &lt;citation&gt;
+      &lt;citeinfo&gt;
+        &lt;origin&gt;David Rumsey Map Collection&lt;/origin&gt;
+        &lt;pubdate/&gt;
+        &lt;title&gt;City Of San Francisco And Its Vicinity, California. United States Coast Survey, 1859&lt;/title&gt;
+        &lt;pubinfo&gt;
+          &lt;pubplace/&gt;
+          &lt;publish&gt;Washington: U.S. Coast Survey&lt;/publish&gt;
+        &lt;/pubinfo&gt;
+      &lt;/citeinfo&gt;
+    &lt;/citation&gt;
+    &lt;descript&gt;
+      &lt;abstract&gt;U.S. Coast Survey A.D. Bache, Superintendent. City Of San Francisco And Its Vicinity California. Topography by A.F. Rodgers, Sub-assistant. Hydrography by the Party under the command of Lieut. R.M. Cuyler N.S.N. Assistant. Published in 1859. U.S. Coast Survey Office. Price 40 cents. Verified W.R. Palmer Capt. Topl. Engrs. Asst. C.S. In charge of Office. Lith. of J. Bien 60 Fulton St. N.Y.&lt;/abstract&gt;
+      &lt;purpose/&gt;
+    &lt;/descript&gt;
+    &lt;timeperd&gt;
+      &lt;timeinfo&gt;
+        &lt;rngdates&gt;
+          &lt;begdate/&gt;
+          &lt;enddate/&gt;
+        &lt;/rngdates&gt;
+      &lt;/timeinfo&gt;
+      &lt;current&gt;source map publication date&lt;/current&gt;
+    &lt;/timeperd&gt;
+    &lt;status&gt;
+      &lt;progress&gt;Complete&lt;/progress&gt;
+      &lt;update&gt;None planned&lt;/update&gt;
+    &lt;/status&gt;
+    &lt;spdom&gt;
+      &lt;bounding&gt;
+        &lt;westbc/&gt;
+        &lt;eastbc/&gt;
+        &lt;northbc/&gt;
+        &lt;southbc/&gt;
+      &lt;/bounding&gt;
+    &lt;/spdom&gt;
+    &lt;keywords&gt;
+      &lt;theme&gt;
+        &lt;themekt&gt;Maps, Maps, topographic, manuscript map, drainage, rivers, basin, land divisions,&lt;/themekt&gt;
+        &lt;themekey&gt;California, San Francisco&lt;/themekey&gt;
+      &lt;/theme&gt;
+    &lt;/keywords&gt;
+    &lt;accconst&gt;None&lt;/accconst&gt;
+    &lt;useconst&gt;None&lt;/useconst&gt;
+  &lt;/idinfo&gt;
+  &lt;metainfo&gt;
+    &lt;metd&gt;May 11, 2012&lt;/metd&gt;
+    &lt;metc&gt;
+      &lt;cntinfo&gt;
+        &lt;cntperp&gt;
+          &lt;cntper&gt;Digital and Rare Maps Librarian, David Rumsey Map Center&lt;/cntper&gt;
+        &lt;/cntperp&gt;
+        &lt;cntaddr&gt;
+          &lt;addrtype&gt;Green Library, Stanford University&lt;/addrtype&gt;
+          &lt;city&gt;Stanford&lt;/city&gt;
+          &lt;state&gt;California&lt;/state&gt;
+          &lt;postal&gt;94305&lt;/postal&gt;
+        &lt;/cntaddr&gt;
+        &lt;cntvoice/&gt;
+      &lt;/cntinfo&gt;
+    &lt;/metc&gt;
+    &lt;metstdn&gt;FGDC Content Standards for Digital Geospatial Metadata&lt;/metstdn&gt;
+    &lt;metstdv&gt;FGDC-STD-001-1998&lt;/metstdv&gt;
+  &lt;/metainfo&gt;
+&lt;/metadata&gt;</field>
+    <field name="CollectionId">Stanford Public</field>
+    <field name="ContentDate">2012-01-01T01:01:01Z</field>
+    <field name="DataType">Raster</field>
+    <field name="GeoReferenced">true</field>
+    <field name="Institution">Stanford</field>
+    <field name="LayerDisplayName">City of San Francisco 1859</field>
+    <field name="LayerId">nr328xd0697</field>
+    <field name="Location">{"wms": ["http://kurma-test.stanford.edu/geoserver/stanford/wms"], "tilecache" : ["http://kurma-test.stanford.edu:80/geoserver/gwc/service/wms"], "servicesStart": [], "wfs": "http://kurma-test.stanford.edu/geoserver/stanford/wfs"}</field>
+    <field name="CenterX">0.0</field>
+    <field name="CenterY">0.0</field>
+    <field name="MinX">-122.443397</field>
+    <field name="MaxY">37.8247799</field>
+    <field name="MaxX">-122.37221600000001</field>
+    <field name="MinY">37.74334790000001</field>
+    <field name="Name">nr328xd0697</field>
+    <field name="Originator">SULAIR</field>
+    <field name="Publisher">SULAIR</field>
+    <field name="SrsProjectionCode">4326</field>
+    <field name="WorkspaceName">stanford</field>
+  </doc>
+</add>

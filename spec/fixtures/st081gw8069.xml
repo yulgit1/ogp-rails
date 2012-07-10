@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<add>
+  <doc>
+    <field name="Access">Public</field>
+    <field name="Availability">Online</field>
+    <field name="FgdcText">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;metadata xmlns:geonet="http://www.fao.org/geonetwork" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.fgdc.gov/schemas/metadata/fgdc-std-001-1998.xsd"&gt;
+  &lt;idinfo&gt;
+    &lt;citation&gt;
+      &lt;citeinfo&gt;
+        &lt;origin&gt;David Rumsey Map Collection&lt;/origin&gt;
+        &lt;pubdate/&gt;
+        &lt;title&gt;The "Chevalier" Commercial, Pictorial and Tourist Map of San Francisco From Latest U.S. Gov. and Official Surveys (Raster Image)&lt;/title&gt;
+        &lt;pubinfo&gt;
+          &lt;pubplace&gt;San Francisco&lt;/pubplace&gt;
+          &lt;publish&gt;Chevalier, August&lt;/publish&gt;
+        &lt;/pubinfo&gt;
+      &lt;/citeinfo&gt;
+    &lt;/citation&gt;
+    &lt;descript&gt;
+      &lt;abstract&gt;The "Chevalier" Commercial, Pictorial and Tourist Map of San Francisco From Latest U.S. Gov. and Official Surveys. Designed-Engraved And Copyrighted By Aug. Chevalier, Lithographer Publisher, San Francisco. It was published by August Chevalier in 1911. Scale 1:9,600.  This layer is part of a selection of digitally scanned and georeferenced historic maps from The David Rumsey Map Collection.  1st edition was 1903. A very beautiful map of San Francisco showing contour lines; all important buildings and public improvements are drawn in vignettes on the map. At the bottom of the map is the publisher's statement: "This Map is an Improved and Enlarged Edition of The Commercial Pictorial and Tourist Map of San Francisco Copyrighted Dec. 1903 by August Chevalier. Similar Maps For Other Cities in the U.S. Are Being Made." "The Exposition City 1915".&lt;/abstract&gt;
+      &lt;purpose&gt;Historic paper maps can provide an excellent view of the changes that have occurred in the cultural and physical landscape.  The wide range of information provided on these maps make them useful in the study of historic geography, and urban and rural land use change.  As this map has been georeferenced, it can be used in a GIS as a source or background layer in conjunction with other GIS data.&lt;/purpose&gt;
+    &lt;/descript&gt;
+    &lt;timeperd&gt;
+      &lt;timeinfo&gt;
+        &lt;rngdates&gt;
+          &lt;begdate/&gt;
+          &lt;enddate/&gt;
+        &lt;/rngdates&gt;
+      &lt;/timeinfo&gt;
+      &lt;current&gt;source map publication date&lt;/current&gt;
+    &lt;/timeperd&gt;
+    &lt;status&gt;
+      &lt;progress&gt;Complete&lt;/progress&gt;
+      &lt;update&gt;None planned&lt;/update&gt;
+    &lt;/status&gt;
+    &lt;spdom&gt;
+      &lt;bounding&gt;
+        &lt;westbc/&gt;
+        &lt;eastbc/&gt;
+        &lt;northbc/&gt;
+        &lt;southbc/&gt;
+      &lt;/bounding&gt;
+    &lt;/spdom&gt;
+    &lt;keywords&gt;
+      &lt;theme&gt;
+        &lt;themekt&gt;LCSH&lt;/themekt&gt;
+        &lt;themekey&gt;Maps&lt;/themekey&gt;
+        &lt;themekey&gt;Maps, Topographic&lt;/themekey&gt;
+        &lt;themekey&gt;Human settlements&lt;/themekey&gt;
+        &lt;themekey&gt;Cities and towns&lt;/themekey&gt;
+        &lt;themekey&gt;Landforms&lt;/themekey&gt;
+        &lt;themekey&gt;Transportation&lt;/themekey&gt;
+        &lt;themekey&gt;Bodies of water&lt;/themekey&gt;
+      &lt;/theme&gt;
+      &lt;theme&gt;
+        &lt;themekt&gt;GNIS&lt;/themekt&gt;
+        &lt;themekey&gt;California&lt;/themekey&gt;
+        &lt;themekey&gt;San Francisco Peninsula&lt;/themekey&gt;
+        &lt;themekey&gt;San Francisco&lt;/themekey&gt;
+        &lt;themekey&gt;Daly City&lt;/themekey&gt;
+        &lt;themekey&gt;South San Francisco&lt;/themekey&gt;
+      &lt;/theme&gt;
+    &lt;/keywords&gt;
+    &lt;accconst&gt;None.&lt;/accconst&gt;
+    &lt;useconst&gt;None.&lt;/useconst&gt;
+  &lt;/idinfo&gt;
+  &lt;metainfo&gt;
+    &lt;metd&gt;May 9, 2012&lt;/metd&gt;
+    &lt;metc&gt;
+      &lt;cntinfo&gt;
+        &lt;cntperp&gt;
+          &lt;cntper&gt;Head, Branner Earth Sciences Library and Map Collections&lt;/cntper&gt;
+        &lt;/cntperp&gt;
+        &lt;cntaddr&gt;
+          &lt;addrtype&gt;397 Panama Mall, Stanford University&lt;/addrtype&gt;
+          &lt;city&gt;Stanford&lt;/city&gt;
+          &lt;state&gt;CA&lt;/state&gt;
+          &lt;postal&gt;94305&lt;/postal&gt;
+        &lt;/cntaddr&gt;
+        &lt;cntvoice&gt;650-723-2746&lt;/cntvoice&gt;
+      &lt;/cntinfo&gt;
+    &lt;/metc&gt;
+    &lt;metstdn&gt;FGDC Content Standards for Digital Geospatial Metadata&lt;/metstdn&gt;
+    &lt;metstdv&gt;FGDC-STD-001-1998&lt;/metstdv&gt;
+  &lt;/metainfo&gt;
+&lt;/metadata&gt;</field>
+    <field name="CollectionId">Stanford Public</field>
+    <field name="ContentDate">2012-01-01T01:01:01Z</field>
+    <field name="DataType">Raster</field>
+    <field name="GeoReferenced">true</field>
+    <field name="Institution">Stanford</field>
+    <field name="LayerDisplayName">San Francisco 1915</field>
+    <field name="LayerId">st081gw8069</field>
+    <field name="Location">{"wms": ["http://kurma-test.stanford.edu/geoserver/stanford/wms"], "tilecache" : ["http://kurma-test.stanford.edu:80/geoserver/gwc/service/wms"], "servicesStart": [], "wfs": "http://kurma-test.stanford.edu/geoserver/stanford/wfs"}</field>
+    <field name="CenterX">0.0</field>
+    <field name="CenterY">0.0</field>
+    <field name="MinX">-122.53563906324891</field>
+    <field name="MaxY">37.82778751151479</field>
+    <field name="MaxX">-122.34904206324892</field>
+    <field name="MinY">37.6603065115148</field>
+    <field name="Name">st081gw8069</field>
+    <field name="Originator">SULAIR</field>
+    <field name="Publisher">SULAIR</field>
+    <field name="SrsProjectionCode">4326</field>
+    <field name="WorkspaceName">stanford</field>
+  </doc>
+</add>

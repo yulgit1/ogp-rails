@@ -1,0 +1,21 @@
+/*
+@import "sul_chrome/sul_chrome_mixins"; 
+*/
+
+#main {
+    float: right;
+    width: 1204px;
+}
+#sidebar {
+    float: left;
+}
+
+
+
+/* This seems to help fix an issue w/ floats once we stack all columns on-top of each other */
+#main, #sidebar {
+    @media (max-width: 767px) {
+      float: none;
+    }
+}
+

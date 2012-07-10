@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<add>
+  <doc>
+    <field name="Access">Public</field>
+    <field name="Availability">Online</field>
+    <field name="FgdcText">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;metadata xmlns:geonet="http://www.fao.org/geonetwork" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.fgdc.gov/schemas/metadata/fgdc-std-001-1998.xsd"&gt;
+  &lt;idinfo&gt;
+    &lt;citation&gt;
+      &lt;citeinfo&gt;
+        &lt;origin&gt;David Rumsey Map Collection&lt;/origin&gt;
+        &lt;pubdate/&gt;
+        &lt;title&gt;Topographical Map Of The Yosemite Valley And Vicinity. Preliminary Edition. Part Of East Central California. Mountain Drawing by J.E. Weyss; Lettering by J. Franke. From Topographical Plat by Lt. Macomb, Nov. 30, 1883. Julius Bien &amp;amp; Co. Photo. lith. Expeditions Of 1878-79, Under the Command of Capt. Geo. M. Wheeler, Corps of Engineers, U.S. Army. U.S. Geographical Surveys West Of The 100th Meridian.&lt;/title&gt;
+        &lt;pubinfo&gt;
+          &lt;pubplace/&gt;
+          &lt;publish&gt;Authority Of The Honorable The Secretary Of War, And The Direction Of Brig. Genl. A.A. Humphreys, Chief Of Engineers, U.S. Army.&lt;/publish&gt;
+        &lt;/pubinfo&gt;
+      &lt;/citeinfo&gt;
+    &lt;/citation&gt;
+    &lt;descript&gt;
+      &lt;abstract&gt;This first detailed survey of Yosemite Valley shows interesting cultural features in the valley, many of which no longer exist. The steep valley cliffs are shown with a map style of the 19th century called hachuring - closely spaced lines to indicate slope. It was published separately and as part of the Topographical Atlas ... West of the 100th Meridian of Longitude also known as the Wheeler Survey, one of the most important of the U.S. Army survey's of the American West in the late 19th century.
+
+This is part of a collection of 135 Topographical and Geological Atlas sheets. An almost complete collection of all the Wheeler survey maps originally owned by the Salt Lake Mining Institute. I have since added maps to make it nearly a complete set, following the listing in P1281 (which lists 179 sheets). Many of the sheets in the original Salt Lake Mining Institute set have the signature of Ovando Hollister, an important figure in western mining history.
+
+This historical cartographic image is part of the David Rumsey Historical Map Collection, www.davidrumsey.com, a large collection of online antique, rare, old, and historical maps, atlases, globes, charts, and other cartographic items.&lt;/abstract&gt;
+      &lt;purpose/&gt;
+    &lt;/descript&gt;
+    &lt;timeperd&gt;
+      &lt;timeinfo&gt;
+        &lt;rngdates&gt;
+          &lt;begdate/&gt;
+          &lt;enddate/&gt;
+        &lt;/rngdates&gt;
+      &lt;/timeinfo&gt;
+      &lt;current&gt;source map publication date&lt;/current&gt;
+    &lt;/timeperd&gt;
+    &lt;status&gt;
+      &lt;progress&gt;Complete&lt;/progress&gt;
+      &lt;update&gt;None planned&lt;/update&gt;
+    &lt;/status&gt;
+    &lt;spdom&gt;
+      &lt;bounding&gt;
+        &lt;westbc/&gt;
+        &lt;eastbc/&gt;
+        &lt;northbc/&gt;
+        &lt;southbc/&gt;
+      &lt;/bounding&gt;
+    &lt;/spdom&gt;
+    &lt;keywords&gt;
+      &lt;theme&gt;
+        &lt;themekt&gt;map, map, topographic, national parks, valley, canyon&lt;/themekt&gt;
+        &lt;themekey&gt;yosemite, yosemite valley, california, mariposa county&lt;/themekey&gt;
+      &lt;/theme&gt;
+    &lt;/keywords&gt;
+    &lt;accconst&gt;none&lt;/accconst&gt;
+    &lt;useconst&gt;none&lt;/useconst&gt;
+  &lt;/idinfo&gt;
+  &lt;metainfo&gt;
+    &lt;metd&gt;May 9, 2012&lt;/metd&gt;
+    &lt;metc&gt;
+      &lt;cntinfo&gt;
+        &lt;cntperp&gt;
+          &lt;cntper&gt;Digital &amp;amp; Rare Maps Librarian, David Rumsey Map Center&lt;/cntper&gt;
+        &lt;/cntperp&gt;
+        &lt;cntaddr&gt;
+          &lt;addrtype&gt;Cecil H. Green Library&lt;/addrtype&gt;
+          &lt;city&gt;Stanford&lt;/city&gt;
+          &lt;state&gt;CA&lt;/state&gt;
+          &lt;postal&gt;94705-6004&lt;/postal&gt;
+        &lt;/cntaddr&gt;
+        &lt;cntvoice&gt;650-723-2746&lt;/cntvoice&gt;
+      &lt;/cntinfo&gt;
+    &lt;/metc&gt;
+    &lt;metstdn&gt;FGDC Content Standard for Digital Geospatial Metadata&lt;/metstdn&gt;
+    &lt;metstdv&gt;FGDC-STD-001-1998&lt;/metstdv&gt;
+  &lt;/metainfo&gt;
+&lt;/metadata&gt;</field>
+    <field name="CollectionId">Stanford Public</field>
+    <field name="ContentDate">2012-01-01T01:01:01Z</field>
+    <field name="DataType">Raster</field>
+    <field name="GeoReferenced">true</field>
+    <field name="Institution">Stanford</field>
+    <field name="LayerDisplayName">Yosemite 1883</field>
+    <field name="LayerId">fg075mc0032</field>
+    <field name="Location">{"wms": ["http://kurma-test.stanford.edu/geoserver/stanford/wms"], "tilecache" : ["http://kurma-test.stanford.edu:80/geoserver/gwc/service/wms"], "servicesStart": [], "wfs": "http://kurma-test.stanford.edu/geoserver/stanford/wfs"}</field>
+    <field name="CenterX">0.0</field>
+    <field name="CenterY">0.0</field>
+    <field name="MinX">-119.73520982814188</field>
+    <field name="MaxY">37.82586065149456</field>
+    <field name="MaxX">-119.45455256561247</field>
+    <field name="MinY">37.64510063601431</field>
+    <field name="Name">fg075mc0032</field>
+    <field name="Originator">SULAIR</field>
+    <field name="Publisher">SULAIR</field>
+    <field name="SrsProjectionCode">4326</field>
+    <field name="WorkspaceName">stanford</field>
+  </doc>
+</add>

@@ -1,0 +1,72 @@
+.sulair-footer {
+  font-family:Lucida Grande,Verdana,Arial,sans-serif;font-size:75%;line-height:1.8;
+  background-color: #C2B6A6;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -moz-border-bottom-right-radius: 6px;
+  -moz-border-bottom-left-radius: 6px;        
+}
+.sulair-footer a, 
+.sulair-footer a:visited, 
+.sulair-footer a:active {
+  color: #575347;
+  text-decoration: none;
+}
+      
+.sulair-footer ul.sub-menu a, 
+.sulair-footer ul.sub-menu a:visited, 
+.sulair-footer ul.sub-menu a:active {
+  border-bottom: 1px dotted #575347;
+}
+
+.sulair-footer ul.menu, .sulair-footer ul.sub-menu {
+  border: none;
+  list-style: none;
+  padding: 0;        
+}
+
+.sulair-footer ul.menu {
+  border-right: 1px dotted #575347;
+  float: left;
+  margin-left: 1.66%;
+  position: relative;
+  width: 15%;
+  min--width: 1045px;
+}
+
+.no-right-border { border-right-width: 0 !important; } 
+
+.sulair-footer ul.sub-menu {
+  margin-top: 8px;
+}
+
+.sulair-footer .footer-menu-header {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+span.ext {
+  background: url(../media/sulair_extlink.png) right center no-repeat;
+  padding-right: 12px;
+  margin-right: 8px;
+}      
+
+li.phone, 
+li.chat,
+li.email-us { 
+  background-image: url(../media/bg-footer-sprite.png);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
+li.phone    { background-position: -4px -38px; }
+li.chat     { background-position: -4px -18px; }
+li.email-us { background-position: -2px -1px; }
+
+
+.olLayerGooglePoweredBy.olLayerGoogleV3.gmnoprint { 
+  visibility:hidden; 
+} 

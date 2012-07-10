@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<add>
+  <doc>
+    <field name="Access">Public</field>
+    <field name="Availability">Online</field>
+    <field name="FgdcText">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;metadata xmlns:geonet="http://www.fao.org/geonetwork" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.fgdc.gov/schemas/metadata/fgdc-std-001-1998.xsd"&gt;
+  &lt;idinfo&gt;
+    &lt;citation&gt;
+      &lt;citeinfo&gt;
+        &lt;origin&gt;David Rumsey Map Collection&lt;/origin&gt;
+        &lt;pubdate/&gt;
+        &lt;title&gt;Los Angeles &amp;amp; San Bernardino topography. Wm. H. Hall, State Engineer, Sacramento.&lt;/title&gt;
+        &lt;pubinfo&gt;
+          &lt;pubplace&gt;Sacramento&lt;/pubplace&gt;
+          &lt;publish&gt;Hall, Wm. Ham. (William Hammond) ; California. Office of State Engineer&lt;/publish&gt;
+        &lt;/pubinfo&gt;
+      &lt;/citeinfo&gt;
+    &lt;/citation&gt;
+    &lt;descript&gt;
+      &lt;abstract&gt;Beautiful hand drawn map of the Los Angles-San Bernadino Basin. Pen-and-ink and pencil. Relief shown by hachures. It appears to be a base map on a scale of two miles to an inch, probably preliminary (several of Hall's notations on the edges indicate corrections needed to the topography) and earlier than the 1888 Report titled "Irrigation in California" that had 15 maps that may have been derived from this map. It may also have served as the base for "Drainage area map to accompany report on irrigation and water supply in California" by Wm. Ham. Hall, State Engineer. (188-?). Hall was a famous engineer who was the first state engineer and was responsible for many of the early state water projects (see California Water Atlas). This map does not have any names drawn in except for a few towns, rivers, or railroads lightly penciled in. All the land divisions and city plats are indicated, with mountains, rivers, railroads, roads, arroyos and shorelines shown. Hall also published four maps of the San Joaquin Valley in 1886 (see WH's copy) separately (see Calfornia Water Atlas p.26). "VI." Title and cartographer from verso. "14" on verso. 
+
+This historical cartographic image is part of the David Rumsey Historical Map Collection, www.davidrumsey.com, a large collection of online antique, rare, old, and historical maps, atlases, globes, charts, and other cartographic items. Read more about the Collection. Or you can view the entire David Rumsey Map Collection in Insight.&lt;/abstract&gt;
+      &lt;purpose/&gt;
+    &lt;/descript&gt;
+    &lt;timeperd&gt;
+      &lt;timeinfo&gt;
+        &lt;rngdates&gt;
+          &lt;begdate/&gt;
+          &lt;enddate/&gt;
+        &lt;/rngdates&gt;
+      &lt;/timeinfo&gt;
+      &lt;current&gt;source map publication date&lt;/current&gt;
+    &lt;/timeperd&gt;
+    &lt;status&gt;
+      &lt;progress&gt;Complete&lt;/progress&gt;
+      &lt;update&gt;None Planned&lt;/update&gt;
+    &lt;/status&gt;
+    &lt;spdom&gt;
+      &lt;bounding&gt;
+        &lt;westbc/&gt;
+        &lt;eastbc/&gt;
+        &lt;northbc/&gt;
+        &lt;southbc/&gt;
+      &lt;/bounding&gt;
+    &lt;/spdom&gt;
+    &lt;keywords&gt;
+      &lt;theme&gt;
+        &lt;themekt&gt;Maps, Maps, topographic, manuscript map, drainage, rivers, basin, land divisions,&lt;/themekt&gt;
+        &lt;themekey&gt;California, Los Angelos, San Bernardino&lt;/themekey&gt;
+      &lt;/theme&gt;
+    &lt;/keywords&gt;
+    &lt;accconst&gt;None&lt;/accconst&gt;
+    &lt;useconst&gt;None&lt;/useconst&gt;
+  &lt;/idinfo&gt;
+  &lt;metainfo&gt;
+    &lt;metd&gt;May 11, 2012&lt;/metd&gt;
+    &lt;metc&gt;
+      &lt;cntinfo&gt;
+        &lt;cntperp&gt;
+          &lt;cntper&gt;Digital and Rare Maps Librarian, David Rumsey Map Center&lt;/cntper&gt;
+        &lt;/cntperp&gt;
+        &lt;cntaddr&gt;
+          &lt;addrtype&gt;Green Library, Stanford University&lt;/addrtype&gt;
+          &lt;city&gt;Stanford&lt;/city&gt;
+          &lt;state&gt;CA&lt;/state&gt;
+          &lt;postal&gt;94305&lt;/postal&gt;
+        &lt;/cntaddr&gt;
+        &lt;cntvoice&gt;650-723-2746&lt;/cntvoice&gt;
+      &lt;/cntinfo&gt;
+    &lt;/metc&gt;
+    &lt;metstdn&gt;FGDC Content Standards for Digital Geospatial Metadata&lt;/metstdn&gt;
+    &lt;metstdv&gt;FGDC-STD-001-1998&lt;/metstdv&gt;
+  &lt;/metainfo&gt;
+&lt;/metadata&gt;</field>
+    <field name="CollectionId">Stanford Public</field>
+    <field name="ContentDate">2012-01-01T01:01:01Z</field>
+    <field name="DataType">Raster</field>
+    <field name="GeoReferenced">true</field>
+    <field name="Institution">Stanford</field>
+    <field name="LayerDisplayName">Los Angeles 1880</field>
+    <field name="LayerId">vt387jp2614</field>
+    <field name="Location">{"wms": ["http://kurma-test.stanford.edu/geoserver/stanford/wms"], "tilecache" : ["http://kurma-test.stanford.edu:80/geoserver/gwc/service/wms"], "servicesStart": [], "wfs": "http://kurma-test.stanford.edu/geoserver/stanford/wfs"}</field>
+    <field name="CenterX">0.0</field>
+    <field name="CenterY">0.0</field>
+    <field name="MinX">-119.01183186406432</field>
+    <field name="MaxY">34.496748711896835</field>
+    <field name="MaxX">-116.92400444765046</field>
+    <field name="MinY">33.37410702302586</field>
+    <field name="Name">vt387jp2614</field>
+    <field name="Originator">SULAIR</field>
+    <field name="Publisher">SULAIR</field>
+    <field name="SrsProjectionCode">4326</field>
+    <field name="WorkspaceName">stanford</field>
+  </doc>
+</add>

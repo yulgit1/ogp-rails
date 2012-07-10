@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<add>
+  <doc>
+    <field name="Access">Public</field>
+    <field name="Availability">Online</field>
+    <field name="FgdcText">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;metadata xmlns:geonet="http://www.fao.org/geonetwork" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.fgdc.gov/schemas/metadata/fgdc-std-001-1998.xsd"&gt;
+  &lt;idinfo&gt;
+    &lt;citation&gt;
+      &lt;citeinfo&gt;
+        &lt;origin&gt;David Rumsey Map Collection&lt;/origin&gt;
+        &lt;pubdate/&gt;
+        &lt;title&gt;Globo terrestre / delineato sulle ultime osservazioni con i viaggi e nuove scoperte del Cap. Cook, inglese ; Gio. Ma. Cassini C.R.S. inc. Roma : Presso la Calcograf[i]a cam[era]le, 1790.&lt;/title&gt;
+        &lt;pubinfo&gt;
+          &lt;pubplace&gt;Rome&lt;/pubplace&gt;
+          &lt;publish&gt;Roma : Presso la Calcograf[i]a cam[era]le&lt;/publish&gt;
+        &lt;/pubinfo&gt;
+      &lt;/citeinfo&gt;
+    &lt;/citation&gt;
+    &lt;descript&gt;
+      &lt;abstract&gt;Cassini's gores are shown in the top image in their original printed form on four sheets. They were used to create a globe 34cm in diameter. The gores were digitally scanned and georeferenced to the WGS 1984 coordinate system in the middle image. In the bottom image they have been projected in GIS in the form of a virtual globe. The physical gores reside in the Library of Congress, Geography and Map Division. The georectifed map images were created by the David Rumsey Map Collection. The globe shows contemporary discoveries in the Pacific as well as the routes of three of Captain James Cook's voyages. Cassini was a cartographer and publisher in Rome. He was one of the last of the Italian globe makers active at the end of the 18th century.
+
+This historical cartographic image is part of the David Rumsey Historical Map Collection, www.davidrumsey.com, a large collection of online historical maps, atlases and other cartographic items. Read more about the Collection.&lt;/abstract&gt;
+      &lt;purpose/&gt;
+    &lt;/descript&gt;
+    &lt;timeperd&gt;
+      &lt;timeinfo&gt;
+        &lt;rngdates&gt;
+          &lt;begdate/&gt;
+          &lt;enddate/&gt;
+        &lt;/rngdates&gt;
+      &lt;/timeinfo&gt;
+      &lt;current&gt;source map publication date&lt;/current&gt;
+    &lt;/timeperd&gt;
+    &lt;status&gt;
+      &lt;progress&gt;Complete&lt;/progress&gt;
+      &lt;update&gt;none planned&lt;/update&gt;
+    &lt;/status&gt;
+    &lt;spdom&gt;
+      &lt;bounding&gt;
+        &lt;westbc/&gt;
+        &lt;eastbc/&gt;
+        &lt;northbc/&gt;
+        &lt;southbc/&gt;
+      &lt;/bounding&gt;
+    &lt;/spdom&gt;
+    &lt;keywords&gt;
+      &lt;theme&gt;
+        &lt;themekt&gt;globes, gores, relief&lt;/themekt&gt;
+        &lt;themekey&gt;world, globe&lt;/themekey&gt;
+      &lt;/theme&gt;
+    &lt;/keywords&gt;
+    &lt;accconst/&gt;
+    &lt;useconst/&gt;
+  &lt;/idinfo&gt;
+  &lt;metainfo&gt;
+    &lt;metd&gt;May 11, 2012&lt;/metd&gt;
+    &lt;metc&gt;
+      &lt;cntinfo&gt;
+        &lt;cntperp&gt;
+          &lt;cntper&gt;Digital and Rare Maps Librarian, David Rumsey Map Center&lt;/cntper&gt;
+        &lt;/cntperp&gt;
+        &lt;cntaddr&gt;
+          &lt;addrtype&gt;Green Library, Stanford University&lt;/addrtype&gt;
+          &lt;city&gt;Stanford&lt;/city&gt;
+          &lt;state&gt;CA&lt;/state&gt;
+          &lt;postal&gt;94305&lt;/postal&gt;
+        &lt;/cntaddr&gt;
+        &lt;cntvoice&gt;650-723-2746&lt;/cntvoice&gt;
+      &lt;/cntinfo&gt;
+    &lt;/metc&gt;
+    &lt;metstdn&gt;FGDC Content Standards for Digital Geospatial Metadata&lt;/metstdn&gt;
+    &lt;metstdv&gt;FGDC-STD-001-1998&lt;/metstdv&gt;
+  &lt;/metainfo&gt;
+&lt;/metadata&gt;</field>
+    <field name="CollectionId">Stanford Public</field>
+    <field name="ContentDate">2012-01-01T01:01:01Z</field>
+    <field name="DataType">Raster</field>
+    <field name="GeoReferenced">true</field>
+    <field name="Institution">Stanford</field>
+    <field name="LayerDisplayName">Cassini's World Globe 1790</field>
+    <field name="LayerId">kc101mq3266</field>
+    <field name="Location">{"wms": ["http://kurma-test.stanford.edu/geoserver/stanford/wms"], "tilecache" : ["http://kurma-test.stanford.edu:80/geoserver/gwc/service/wms"], "servicesStart": [], "wfs": "http://kurma-test.stanford.edu/geoserver/stanford/wfs"}</field>
+    <field name="CenterX">0.0</field>
+    <field name="CenterY">0.0</field>
+    <field name="MinX">-180.0</field>
+    <field name="MaxY">88.92573851560911</field>
+    <field name="MaxX">179.99439156613641</field>
+    <field name="MinY">-89.154506</field>
+    <field name="Name">kc101mq3266</field>
+    <field name="Originator">SULAIR</field>
+    <field name="Publisher">SULAIR</field>
+    <field name="SrsProjectionCode">4326</field>
+    <field name="WorkspaceName">stanford</field>
+  </doc>
+</add>

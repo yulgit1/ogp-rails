@@ -1,0 +1,53 @@
+institutionSpecificJavaScript: ""
+homeInstitution: Stanford
+institutionSpecificCss: css/institutionStanford.css
+googleAPIKey: AIzaSyDg_fCEEXrp02riUN_X1YtfR3PDcaGHi28
+googleAnalyticsId: UA-7439030-12
+institutions: 
+  Stanford: 
+    graphics: 
+      sourceIcon: 
+        altDisplay: Stanford
+        tooltipText: Stanford
+        resourceLocation: media/src_stanford.png
+  MIT: 
+    graphics: 
+      sourceIcon: 
+        altDisplay: MIT
+        tooltipText: Massachusetts Institute of Technology
+        resourceLocation: media/src_mit.png
+  Harvard: 
+    graphics: 
+      sourceIcon: 
+        altDisplay: HGL
+        tooltipText: Harvard Geospatial Library
+        resourceLocation: media/src_harvard.png
+  Princeton: 
+    graphics: 
+      sourceIcon: 
+        altDisplay: Princeton
+        tooltipText: Princeton
+        resourceLocation: media/src_princeton.png
+  Berkeley: 
+    graphics: 
+      sourceIcon: 
+        altDisplay: Berkeley
+        tooltipText: UC Berkeley
+        resourceLocation: media/src_berkeley.png
+  Tufts: 
+    graphics: 
+      sourceIcon: 
+        altDisplay: Tufts
+        tooltipText: Tufts University
+        resourceLocation: media/src_tufts.png
+    proxy: 
+      accessLevel: 
+      - restricted
+      id: proxy.Restricted.Tufts
+      wms: /restricted/wms
+  MassGIS: 
+    graphics: 
+      sourceIcon: 
+        altDisplay: MassGIS
+        tooltipText: MassGIS
+        resourceLocation: media/src_massgis.png
