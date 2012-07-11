@@ -41,6 +41,7 @@ group :development, :test do
   gem 'redcarpet'
   gem 'launchy'
   gem 'jettywrapper'
+  gem 'equivalent-xml'
 end
 
 #gem 'jquery-rails'

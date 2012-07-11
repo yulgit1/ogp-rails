@@ -8,6 +8,8 @@ OgpRails::Application.routes.draw do
 
   match 'shortenLink' => 'catalog#shorten_link' 
 
+  match 'featureInfo' => 'catalog#feature_info'
+
   # This simulates ogpConfig.json response, as configuration for the UI
   match 'ogpConfig' => 'catalog#get_ogp_config' 
 

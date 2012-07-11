@@ -10,6 +10,11 @@ institutions:
         altDisplay: Stanford
         tooltipText: Stanford
         resourceLocation: media/src_stanford.png
+    proxy: 
+      accessLevel: 
+      - public
+      id: proxy.Public.Stanford
+      wms: http://kurma-test.stanford.edu/geoserver/wms
   MIT: 
     graphics: 
       sourceIcon: 
