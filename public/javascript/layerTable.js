@@ -653,7 +653,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
   			}
     		});
     	  jQuery("#metadataDownloadButton").unbind();
-    	  var iframeSource = "getMetadata.xml?download=true&id=" + layerId;
+    	  var iframeSource = "getMetadata.xml?id=" + layerId;
     	  var downloadFunction = function(){
         	  if (typeof jQuery('#metadataDownloadIframe')[0] == 'undefined'){
         		  var downloadIframe = '<iframe id="metadataDownloadIframe" src="' + iframeSource + '"> \n';
@@ -668,7 +668,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 	  this.downloadMetadata = function downloadMetadata(event){
 		  var layerId = event.data.layerId;
 			var params = {
-					url: "getMetadata?download=true&id=" + layerId,
+					url: "getMetadata?id=" + layerId,
 					dataType: 'xml',
 					success: function(data){
 						jQuery(document).append(data);
@@ -695,7 +695,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
           //make an ajax call to retrieve metadata
           var layerId = aData[this.tableHeadingsObj.getColumnIndex("LayerId")];
     	  var params = {
-            url: "getMetadata.html?download=true&id=" + layerId,
+            url: "getMetadata.html?id=" + layerId,
             success: function(data, contextObj) {
                 this.showMetadata(layerId, data)
             },

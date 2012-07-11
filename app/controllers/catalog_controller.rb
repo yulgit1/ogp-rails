@@ -18,7 +18,6 @@ class CatalogController < ApplicationController
   # Serve FGDC geospatial descriptive metadata XML as a file named as the id of the layer (layer_id)
   def get_metadata
     layer_id = params['id']
-    download = params['download']
     fgdc = get_layer(layer_id)['FgdcText']
     respond_to do |format|
       format.xml { 
@@ -28,7 +27,6 @@ class CatalogController < ApplicationController
         render :text => transform_fgdc_to_html(layer_id)
       }
     end
-
   end 
  
   # This shortens a URL provided by the UI using the Google's (goo.gl) URL shortener API service.
@@ -80,11 +78,9 @@ class CatalogController < ApplicationController
     layer = get_layer layer_id
     layer_name = "#{layer['WorkspaceName']}:#{layer['Name']}"
     institution = layer['Institution']
-
-
     conf = OgpRails::Application.config.ogpConfig[:config]
-
     institution_config = conf['institutions'][institution]
+
     if institution_config.has_key?('proxy') 
       # ignore access level for now
       access_level = institution_config['proxy']['access_level']
@@ -104,7 +100,6 @@ class CatalogController < ApplicationController
         render :text => response
       }
     end
-
   end
   
   
@@ -132,5 +127,4 @@ class CatalogController < ApplicationController
       }
     end
   end
-
 end

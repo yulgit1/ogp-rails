@@ -16,13 +16,13 @@ describe CatalogController do
   end
     
   it '#get_metadata will get metadata in xml format' do
-    visit "/getMetadata.xml?id=qw150nc3867&download=true" 
+    visit "/getMetadata.xml?id=qw150nc3867" 
     assert page.find('title').should have_content('California Air Resources Board Air Basins')
     #puts page.body.inspect
   end 
   
   it '#get_metadata will get metadata in html format as a xsl transform out from xml' do
-    visit "/getMetadata.html?id=qw150nc3867&download=true" 
+    visit "/getMetadata.html?id=qw150nc3867" 
     assert page.find('h1').should have_content('California Air Resources Board Air Basins')
     #save_and_open_page
   end 

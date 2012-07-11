@@ -410,39 +410,6 @@ org.OpenGeoPortal.MapController.prototype.getAttributeDescriptionJsonpError = fu
 	throw new Error("The attribute description could not be retrieved.");
 };
 
-/*org.OpenGeoPortal.MapController.prototype.ClickHandler = function(){
-	var that = this;
-	OpenLayers.Class(OpenLayers.Control, {                
-
-    defaultHandlerOptions: {
-        'single': true,
-        'double': false,
-        'pixelTolerance': 0,
-        'stopSingle': false,
-        'stopDouble': false
-    },
-
-    initialize: function(options) {
-        this.handlerOptions = OpenLayers.Util.extend(
-            {}, this.defaultHandlerOptions
-        );
-        OpenLayers.Control.prototype.initialize.apply(
-            this, arguments
-        ); 
-        this.handler = new OpenLayers.Handler.Click(
-            this, {
-                'click': this.trigger
-            }, this.handlerOptions
-        );
-    }, 
-
-    trigger: function(e) {
-    	that.wmsGetFeature(e);
-    }
-
-	});
-};*/
-
 org.OpenGeoPortal.MapController.prototype.wmsGetFeature = function(e){
 	//since this is an event handler, the context isn't the MapController Object
 	if (typeof this.map != "undefined"){
@@ -458,21 +425,10 @@ org.OpenGeoPortal.MapController.prototype.wmsGetFeature = function(e){
 	//geoserver doesn't like fractional pixel values
 	searchString += "&x=" + Math.round(pixel.x) + "&y=" + Math.round(pixel.y);
 	searchString += "&height=" + this.map.size.h + "&width=" + this.map.size.w;
-	/*var currentURL = this.url;
-	var wmsUrl;
-	if (jQuery.isArray(currentURL)){
-		wmsUrl = mapObject.config.tilecacheToWMS(currentURL[0]);
-	} else {
-    	wmsUrl = mapObject.config.tilecacheToWMS(currentURL);
-	}
-
-	searchString += "&url=" + wmsUrl;
-*/
     var ajaxParams = {
     		type: "GET",
     		context: this,
-            url: 'featureInfo',//jsp avoids same server restrictions
-            //url: 'getFeatureInformation.jsp',//jsp avoids same server restrictions
+            url: 'featureInfo.gml',
             data: searchString,
             dataType: 'text',
             success: function(data, textStatus, XMLHttpRequest){
