@@ -1,0 +1,15 @@
+development:
+  accessLevel:
+  - public
+  id: proxy.Public.Stanford
+  wms: http://kurma-dev.stanford.edu/geoserver/wms
+test:
+  accessLevel:
+  - public
+  id: proxy.Public.Stanford
+  wms: http://kurma-test.stanford.edu/geoserver/wms
+production:
+  accessLevel:
+  - public
+  id: proxy.Public.Stanford
+  wms: http://kurma.stanford.edu/geoserver/wms
