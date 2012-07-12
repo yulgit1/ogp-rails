@@ -35,6 +35,7 @@ class CatalogController < ApplicationController
   # @example
   #   /shortenLink?link=http%3A%2F%2Fgeodata.tufts.edu%2FopenGeoPortalHome.jsp%3Flayer%255B%255D%3DHARVARD.SDE2.G3201_C82_1884_S8_SHEET1%26minX%3D-264.0234375%26minY%3D-85.051128779807%26maxX%3D264.0234375%26maxY%3D85.051128779807 
   #   => {"shortLink":"http://goo.gl/GJ5Gn"}
+  # TODO: Filter here only OGP Consortium domains to avoid potential abuse of this proxied service.
   def shorten_link 
     slink = { :shortLink => Googl.shorten(params['link']).short_url }
     respond_to do |format| 
@@ -48,7 +49,6 @@ class CatalogController < ApplicationController
   # Refer to app/resources/solr/schema.xml for additional information of all 
   # available fields
   def get_layer layer_id
-    puts OgpRails::Application.config.solr_url
     solr = RSolr.connect :url => OgpRails::Application.config.solr_url
     response = solr.get 'select', :params => {:q => "LayerId:#{layer_id}" }
     response['response']['docs'].first
