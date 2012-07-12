@@ -7,7 +7,6 @@ describe CatalogController do
     Dir.glob("#{::Rails.root}/spec/fixtures/*.xml") { |xml_doc| 
       puts "Ingesting: #{xml_doc}"
       `curl #{OgpRails::Application.config.solr_url}update?commit=true -F file=@#{xml_doc}`
-      break
     }
   end
   

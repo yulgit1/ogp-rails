@@ -11,9 +11,8 @@ task :ci do
   error = nil
   error = Jettywrapper.wrap(jetty_params) do
     Rails.env = "test"
-    Rake::Task["spec"].invoke
     Rake::Task["doc"].invoke
-    Rake::Task["simplecov"].invoke
+    Rake::Task["spec"].invoke
   end
   raise "TEST FAILURES: #{error}" if error
   
