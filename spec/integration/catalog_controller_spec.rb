@@ -5,7 +5,7 @@ describe CatalogController do
   before(:all) do
     # Add fixtures to solr here
     Dir.glob("#{::Rails.root}/spec/fixtures/*.xml") { |xml_doc| 
-      cmd = "curl #{OgpRails::Application.config.solr_url}update?commit=true -F file=@#{xml_doc}"
+      cmd = "curl #{OgpRails::Application.config.solr_url}update?commit=true -F file=@\"#{xml_doc}\""
       puts "Executing: #{cmd}"
       `#{cmd}`
     }
