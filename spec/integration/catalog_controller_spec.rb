@@ -12,7 +12,9 @@ describe CatalogController do
   end
   
   after(:all) do
-    `curl #{OgpRails::Application.config.solr_url}update?commit=true --data-binary '<delete><query>*:*</query></delete>'`
+    cmd = "curl #{OgpRails::Application.config.solr_url}update?commit=true --data-binary '<delete><query>*:*</query></delete>'"
+    puts "Deleting solr records: #{cmd}"
+    `#{cmd}`
   end
     
   it '#get_metadata will get metadata in xml format' do
