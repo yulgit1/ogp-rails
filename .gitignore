@@ -59,8 +59,5 @@ public/plugin_assets/
 .buildpath
 .yardoc
 
-# Ignore jetty 
-jetty
-
 ## PROJECT::SPECIFIC
 
