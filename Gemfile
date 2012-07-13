@@ -17,6 +17,10 @@ gem 'nokogiri'
 
 gem 'rsolr'
 
+gem 'rgeoserver' # Ruby client for GeoServer RESTFul API
+
+gem 'rubyzip'
+
 gem 'googl' # URL shortener
 
 # Gems used only for assets and not required

@@ -15,6 +15,8 @@ OgpRails::Application.routes.draw do
 
   match 'select' => 'catalog#solr_select'
 
+  match 'download' => 'catalog#download'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

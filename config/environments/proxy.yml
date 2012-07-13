@@ -2,14 +2,23 @@ development:
   accessLevel:
   - public
   id: proxy.Public.Stanford
-  wms: http://kurma-dev.stanford.edu/geoserver/wms
+  wms: http://localhost:8983/geoserver/wms
+  admin_url: https://localhost:8983/geoserver/rest
+  admin_pass: geoserver 
+  admin_user: admin
 test:
   accessLevel:
   - public
   id: proxy.Public.Stanford
-  wms: http://kurma-test.stanford.edu/geoserver/wms
+  wms: http://localhost:8983/geoserver/wms
+  admin_url: https://localhost:8983/geoserver/rest
+  admin_pass: geoserver 
+  admin_user: admin
 production:
   accessLevel:
   - public
   id: proxy.Public.Stanford
-  wms: http://kurma.stanford.edu/geoserver/wms
+  wms: http://localhost:8983/geoserver/wms
+  admin_url: https://localhost:8983/geoserver/rest
+  admin_pass: geoserver 
+  admin_user: admin
