@@ -3,7 +3,7 @@ development:
   - public
   id: proxy.Public.Stanford
   wms: http://localhost:8983/geoserver/wms
-  admin_url: https://localhost:8983/geoserver/rest
+  admin_url: http://localhost:8983/geoserver/rest
   admin_pass: geoserver 
   admin_user: admin
 test:
@@ -11,7 +11,7 @@ test:
   - public
   id: proxy.Public.Stanford
   wms: http://localhost:8983/geoserver/wms
-  admin_url: https://localhost:8983/geoserver/rest
+  admin_url: http://localhost:8983/geoserver/rest
   admin_pass: geoserver 
   admin_user: admin
 production:
@@ -19,6 +19,6 @@ production:
   - public
   id: proxy.Public.Stanford
   wms: http://localhost:8983/geoserver/wms
-  admin_url: https://localhost:8983/geoserver/rest
+  admin_url: http://localhost:8983/geoserver/rest
   admin_pass: geoserver 
   admin_user: admin

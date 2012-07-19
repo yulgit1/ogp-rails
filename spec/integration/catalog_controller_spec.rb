@@ -31,6 +31,11 @@ describe CatalogController do
  
   it '#get_feature_info will proxy a wms feature info call to geoserver instances for the given layer at a given point in html format' do
     bbox = '-13799573.846569,4355294.138711,-13412496.735387,4771111.572525'
+    
+    # This should output the following table in html format:
+    # BG073NP4693
+    # fid OBJECTID  ID  GRIDCODE  WHR13NAME Shape_Leng  Shape_Area
+    # bg073np4693.30196 36560 485126.0  10.0  Water 399.998976372 9999.94881867
     visit "/featureInfo.html?OGPID=bg073np4693&bbox=#{bbox}&x=252&y=272&height=680&width=633"
     assert page.find(:xpath, "//table[@class='featureInfo']").should have_content('fid')
     #puts page.body.inspect
