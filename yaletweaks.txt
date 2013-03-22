@@ -19,3 +19,4 @@ index.html
 added to institutionYale.css .site-wrapper
 9) index.html icon:
 <link rel="shortcut icon" href="media/yale_favicon_grayscale.ico" />
+10) index.html, changed language to reflect Yale and Stanford in index.html
