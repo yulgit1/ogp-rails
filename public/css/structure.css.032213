@@ -746,8 +746,7 @@ background: transparent url(../media/sulair-bg-footer.jpg);
 }
 
 #footer-links {
-	/*background: transparent url(../media/footer-stanford-logo.png) no-repeat 0px 0px;*/
-        /*background: transparent url(../media/sulair-bg-footer.jpg) no-repeat 0px 0px;*/
+	background: transparent url(../media/footer-stanford-logo.png) no-repeat 0px 0px;
 	font-style: italic;
 	height: 30px;
 	line-height: 1.5em;

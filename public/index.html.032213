@@ -360,14 +360,7 @@ Welcome to the Yale Geospatial Data Repository
       
   <div class="content">
     <div id="footer-links">
-        <!--
 	<a href="http://www.stanford.edu" class="ext">Stanford University Home</a><span class="ext"></span> <a href="http://visit.stanford.edu/plan/maps.html" class="ext">Maps &amp; Directions</a><span class="ext"></span> <a href="http://www.stanford.edu/search/" class="ext">Search Stanford</a><span class="ext"></span> <a href="http://www.stanford.edu/site/terms.html" class="ext">Terms of Use</a><span class="ext"></span> <a href="http://www.stanford.edu/site/copyright.html" class="ext">Copyright Complaints</a><span class="ext"></span><br><span class="copyright-statement">© Stanford University, Stanford, California 94305. (650) 723-2300</span>
--->
-<a href="http://www.library.yale.edu/htmldocs/search.html">Search this Site</a>
-        &nbsp;/&nbsp; <a href="http://orbis.library.yale.edu/">Orbis Library Catalog</a>
-        &nbsp;/&nbsp; <a href="http://www.library.yale.edu/about/contactus.html">Contact Us</a>
-        &nbsp;/&nbsp; <a href="http://portal.yale.edu/">Yale Info</a> &nbsp;/&nbsp; <a href="http://www.yale.edu/">
-            Yale University</a> &nbsp;/&nbsp; <a href="">Mobile Site</a> &nbsp;/&nbsp; <a href="">Tablet Site</a>
 </div>
   </div>
   

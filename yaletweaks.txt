@@ -1,0 +1,19 @@
+1) put images public/media/yul_blue_name_small.jpg
+public/media/yale_favicon_grayscale.ico
+public/media/yul-by-site-wrapper-blue.png
+2) copied Stanford to  public/css/institutionYale.css
+3) changed #logo
+       width: 600px;
+       background-image: url(../media/yul_blue_name_small.jpg)
+4) made Yale entry in config/environments/ogp.yml
+homeInstitution
+institutionSpecificCss
+googleAPIKey
+googleAnalyticsId
+5) changed welcome name from Stanford to Yale in:
+app/views/index.html.erb
+index.html
+6) changed footer in public/index.html to yale stuff
+7) removed stanford image from footer in @footer-links css/structure.css
+8) created media/yul-by-site-wrapper-blue.png in yale blue
+added to institutionYale.css .site-wrapper

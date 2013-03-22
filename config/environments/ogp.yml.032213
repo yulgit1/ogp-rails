@@ -1,15 +1,9 @@
 institutionSpecificJavaScript: ""
-homeInstitution: Yale
-institutionSpecificCss: css/institutionYale.css
+homeInstitution: Stanford
+institutionSpecificCss: css/institutionStanford.css
 googleAPIKey: AIzaSyDg_fCEEXrp02riUN_X1YtfR3PDcaGHi28
-googleAnalyticsId: UA-16198946-1
-institutions:
-  Yale:
-    graphics:
-      sourceIcon:
-        altDisplay: Yale
-        tooltipText: Yale
-        resourceLocation: media/yale_favicon_grayscale.ico 
+googleAnalyticsId: UA-7439030-12
+institutions: 
   Stanford: 
     graphics: 
       sourceIcon: 

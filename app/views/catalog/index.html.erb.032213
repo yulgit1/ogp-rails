@@ -1,62 +1,16 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>GeoData@Stanford</title>
-<!--script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>-->
-<link rel="stylesheet" href="javascript/openlayers/OpenLayers-2.11/theme/default/style.css" type="text/css" />
-<link rel="stylesheet" href="javascript/openlayers/OpenLayers-2.11/theme/default/google.css" type="text/css" />
-<link rel="stylesheet" href="css/jquery-ui-1.8.2.custom.css" type="text/css" />
-<link rel="stylesheet" href="css/structure.css" type="text/css" />
-<link rel="stylesheet" href="css/mapDiv.css" type="text/css" />
-<link rel="stylesheet" href="css/dataTable.css" type="text/css" />
-<!--<link rel="stylesheet" href="css/institution.css" type="text/css" />-->
-<link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
-<link rel="stylesheet" type="text/css" href="css/sulair-footer.css" />
-<!--
--->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&sensor=false"></script>
-<!--
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDg_fCEEXrp02riUN_X1YtfR3PDcaGHi28&sensor=false"></script>
--->
-<script type="text/javascript" src="javascript/openlayers/OpenLayers-2.11/OpenLayers.js"></script>
-<script type="text/javascript" src="javascript/jquery/js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="javascript/DataTables/media/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="javascript/jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
-<script type="text/javascript" src="javascript/jquery.scrollTo-min.js"></script>
-<script type="text/javascript" src="javascript/jquery.ba-resize.js"></script>
-<script type="text/javascript" src="javascript/panZoom.js"></script>
-<script type="text/javascript" src="javascript/institution.js"></script>
-<script type="text/javascript" src="javascript/errorObject.js"></script>
-<script type="text/javascript" src="javascript/utility.js"></script>
-<script type="text/javascript" src="javascript/mapDiv.js"></script>
-<script type="text/javascript" src="javascript/layerTable.js"></script>
-<script type="text/javascript" src="javascript/userInterface.js"></script>
-<script type="text/javascript" src="javascript/main.js"></script>
-<script type="text/javascript" src="javascript/solr.js"></script>
-<!--
-<script type="text/javascript" src="javascript/geoCommonsExport.js"></script>
--->
-<!-- <script type="text/javascript" src="javascript/testOverviewMap.js"></script>-->
-<!-- We should move to using a cdn where possible with a locally hosted fallback -->
-<!--
-<script type="text/javascript">
-var fallbackURL = "javascript/jquery/js/jquery-1.6.4.min.js";
-if (typeof jQuery == 'undefined') {
-    document.write("<script src=\"" + fallbackURL + "\" type = \"text/javascript\"></" + "script>");
-}
-</script>
--->
-
-
-</head>
-<body>
-<div class="site-wrapper">
-<div id="main" >
-  <div id="header"> 
-  <div id="logo" onclick="location.href='index.html'">
-  </div>
+<div id="header"> 
   <div id="top_menu"> 
+    <a href="">Reset</a> &nbsp;&nbsp;&nbsp;
+    <span id="userGuideLink" class="infoLinks">User Guide</span> 
+     &nbsp;&nbsp;&nbsp;
+    <span id="highlightsLink" class="infoLinks">Highlights</span> 
+     &nbsp;&nbsp;&nbsp;
+    <span id="headerLogin" class="infoLinks login">Login</span>
+  </div>
+  <div id="welcome">Welcome!
+  </div>
+</div>
+ <div id="top_menu"> 
     <a href="">Reset</a> &nbsp;&nbsp;&nbsp;
     <span id="userGuideLink" class="infoLinks">User Guide</span> 
      &nbsp;&nbsp;&nbsp;
@@ -101,7 +55,7 @@ if (typeof jQuery == 'undefined') {
       <div id="home_text" class="welcomeText">
   <h1><!-- This text appears in the search results area on page load and also at the top of
 the 'Getting Started' tab-->
-Welcome to the Yale Geospatial Data Repository 
+Welcome to the Stanford Geospatial Data Repository 
 </h1>
   <p>
   Search, discover, preview, and retrieve geospatial data from multiple repositories
@@ -272,7 +226,7 @@ Welcome to the Yale Geospatial Data Repository
   <div id="welcomeTextSearchTab" class="welcomeText">
   <h1><!-- This text appears in the search results area on page load and also at the top of
 the 'Getting Started' tab-->
-Welcome to the Yale Geospatial Data Repository 
+Welcome to the Stanford Geospatial Data Repository 
 </h1>
   <p>
   Enter a keyword and/or interact with the map to discover geospatial data
@@ -347,95 +301,5 @@ Welcome to the Yale Geospatial Data Repository
   <div class="button ui-button" id="goButton">go</div>
 </div>
 <div id="geoportalMap"></div>
-    
-    </div>
-  </div>
 
-
-
-<div id="copyright-footer" role="contentinfo" class="clearfix">
-  <div class="region region-copyright-footer">
-  <section id="block-block-1" class="block block-block">
-
-      
-  <div class="content">
-    <div id="footer-links">
-        <!--
-	<a href="http://www.stanford.edu" class="ext">Stanford University Home</a><span class="ext"></span> <a href="http://visit.stanford.edu/plan/maps.html" class="ext">Maps &amp; Directions</a><span class="ext"></span> <a href="http://www.stanford.edu/search/" class="ext">Search Stanford</a><span class="ext"></span> <a href="http://www.stanford.edu/site/terms.html" class="ext">Terms of Use</a><span class="ext"></span> <a href="http://www.stanford.edu/site/copyright.html" class="ext">Copyright Complaints</a><span class="ext"></span><br><span class="copyright-statement">© Stanford University, Stanford, California 94305. (650) 723-2300</span>
--->
-<a href="http://www.library.yale.edu/htmldocs/search.html">Search this Site</a>
-        &nbsp;/&nbsp; <a href="http://orbis.library.yale.edu/">Orbis Library Catalog</a>
-        &nbsp;/&nbsp; <a href="http://www.library.yale.edu/about/contactus.html">Contact Us</a>
-        &nbsp;/&nbsp; <a href="http://portal.yale.edu/">Yale Info</a> &nbsp;/&nbsp; <a href="http://www.yale.edu/">
-            Yale University</a> &nbsp;/&nbsp; <a href="">Mobile Site</a> &nbsp;/&nbsp; <a href="">Tablet Site</a>
-</div>
-  </div>
-  
-</section> <!-- /.block -->
-</div>
- <!-- /.region -->
-</div>
-
-
-</div>
-<div id="about" class="dialog infoDialog">
-  <p>
-  GeoData@Stanford is developed and maintained by Stanford Digital Library Systems and Services. 
-  GeoData@Stanford combines an intuitive, map-based search interface along with traditional 
-  text-based metadata search tools for rapid data discovery and for use in teaching, learning, and research.
-  </p>
-  <p>
-  GeoData@Stanford is part of <a href="http://www.opengeoportal.org">The Open Geoportal</a>. The Open Geoportal is a consortium comprised of contributions 
-  of several universities and organizations to help facilitate the discovery and acquisition of geospatial data across many organizations and platforms. 
-  Current partners include: Harvard, MIT, MassGIS, Princeton, Columbia, Stanford, UC Berkeley, UCLA, Yale, and UConn. Built on open source technology, 
-  The Open Geoportal provides organizations the opportunity to share thousands of geospatial data layers, maps, metadata, and development resources through 
-  a single common interface.
-  </p>
-  <p>
-      <span class="geodataContact">For questions, comments, or to report problems, please contact: <a href="mailto:renzo@stanford.edu">renzo@stanford.edu</a></span> 
-  </p>
-</div> 
-<div id="contact" class="dialog infoDialog">
-  <p>
-    <span class="geodataContact">For questions, comments, or to report problems, please contact: <a href="mailto:renzo@stanford.edu">renzo@stanford.edu</a></span> 
-  </p>
-
-  <div>
-    <h3>Project Management:</h3>
-    Julie Sweetkind-Singer
-  </div>
-
-  <div id="contactLogos"> 
-    <div class="gisLogo" title="GIS@Stanford" onclick="location.href='http://gis.stanford.edu/'">
-    </div>
-    <div class="itLogo" title="UIT" onclick="location.href='http://its.stanford.edu/'">
-    </div>
-  </div>
-</div>
- 
-<div id="highlights" class="dialog infoDialog">
-  <p>Welcome to GeoData@Stanford!  We are exited to demonstrate the capabilities of our upcoming web geo portal.
-  </p>
-  <p>
-  Please zoom in and pan around with the map and/or enter search terms to begin discovering our geospatial data holdings.
-  </p>
-</div> 
-</div>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7439030-12']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-</body>
-</html>
 

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-source 'http://sulair-rails-dev.stanford.edu'
+#source 'http://sulair-rails-dev.stanford.edu'
 
 gem 'rails', '3.2.5'
 
