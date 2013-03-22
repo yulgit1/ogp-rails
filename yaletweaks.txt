@@ -17,3 +17,5 @@ index.html
 7) removed stanford image from footer in @footer-links css/structure.css
 8) created media/yul-by-site-wrapper-blue.png in yale blue
 added to institutionYale.css .site-wrapper
+9) index.html icon:
+<link rel="shortcut icon" href="media/yale_favicon_grayscale.ico" />
