@@ -1,7 +1,7 @@
 development: 
   servicePort: 8983
-  serviceProxyAddress: http://localhost:8983/solr/
-  serviceAddress: http://localhost:8983
+  serviceProxyAddress: http://libserver4.yale.edu:8983/solr/
+  serviceAddress: http://libserver4.yale.edu:8983
   serviceType: solr
 test: 
   servicePort: 8983

@@ -1397,7 +1397,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 	//*******Search Results only
 	this.searchRequestJsonpSuccess = function(data)
 	{
-		//console.log(data);
+		//console.log("SRJS:"+data);//ERJ
 		org.OpenGeoPortal.ui.showSearchResults();
 		that.populate(that.processData(data));	
 	    that.tableEffect("searchEnd");
@@ -1406,6 +1406,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 	//*******Search Results only
 	this.searchRequestJsonpError = function()
 	{
+	    console.log("searchRequestJsonpError")//ERJ
 	    that.tableEffect("searchEnd");
 		//throw new Error("The search for relevant layers failed");
 	};
@@ -1476,6 +1477,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 				_gaq.push(["_trackEvent", "search", "advanced"]);
 		}
 		//tempSolr = solr;  // for debugging
+		//alert(solr);//ERJ
 		this.setLastSolrSearch(solr);
 		solr.executeSearchQuery(this.searchRequestJsonpSuccess, this.searchRequestJsonpError);
 	};
@@ -1652,6 +1654,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 	this.deferredSearchSetTimeOut = function(startIndex){
 		var t = setTimeout('org.OpenGeoPortal.resultsTableObj.deferredSearchStart("' + startIndex + '")', 100);
 		//console.log(t);
+		//alert(t);//ERJ
 	};
 	
 	this.deferredSearchStart = function(startIndex){
@@ -1663,6 +1666,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 			this.tableEffect("searchStart");
 			this.searchRequestJsonp(startIndex);
 			//console.log("searchRequestedfromSolr");
+			//alert("searchRequestedfromSolr");//ERJ
 		} else {
 			this.currentSearchRequests = 0;
 		}

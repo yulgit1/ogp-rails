@@ -20,3 +20,26 @@ added to institutionYale.css .site-wrapper
 9) index.html icon:
 <link rel="shortcut icon" href="media/yale_favicon_grayscale.ico" />
 10) index.html, changed language to reflect Yale and Stanford in index.html
+
+Fix Search button:
+tracing Search button functionality
+  layerTable.js
+    this.searchRequest = function(startIndex)
+     -->
+    this.searchRequestJsonp = function(startIndex)
+
+did:
+commented out consolelog
+solr.js
+  org.OpenGeoPortal.Solr.prototype.layerWithinMap = function layerWithinMap(mapMinX, mapMaxX, mapMinY, mapMaxY)
+    layerWithinMap += ",4,4,1,0))";//ERJ 2 instead of 3 parenthesis
+  org.OpenGeoPortal.Solr.prototype.getServerName = function getServerName()
+    var select = "/solr/select";//ERJ instead of select
+    primaryServer = primaryServer + "/solr/select";//instead of select
+
+ogp.yml (changed from localhost)
+development:
+  servicePort: 8983
+  serviceProxyAddress: http://libserver4.yale.edu:8983/solr/
+  serviceAddress: http://libserver4.yale.edu:8983
+  serviceType: solr

@@ -90,15 +90,16 @@ org.OpenGeoPortal.Solr.ServerName = "";
 org.OpenGeoPortal.Solr.prototype.getServerName = function getServerName()
 {
 	var configInfo = org.OpenGeoPortal.InstitutionInfo.getSearch().serviceAddress;
+	//console.log("ERJ I_INFO:"+JSON.stringify(configInfo));//ERJ
 	var elements = configInfo.split(",");
 	var primaryServer = elements[0];
 	if (primaryServer.indexOf("http://") != 0)
 		primaryServer = "http://" + primaryServer;
-	var select = "select";
+	var select = "/solr/select";//ERJ was "select"
 	if ((primaryServer.substring(primaryServer.length - select.length) == select) == false)
 	{
 	    // here if the server name does not end in select
-	    primaryServer = primaryServer + "select";
+	    primaryServer = primaryServer + "/solr/select";//ERJ was "select"
 	}
 	return primaryServer;
 };
@@ -571,6 +572,8 @@ org.OpenGeoPortal.Solr.prototype.getSpatialQuery = function getSpatialQuery() //
 						   this.layerMatchesArea(this.MinX, this.MaxX, this.MinY, this.MaxY) + 
 						   this.layerNearCenterLongitude(this.MinX, this.MaxX) + 
 						   this.layerNearCenterLatitude(this.MinY, this.MaxY);
+	//console.log("SPQ:"+spatialQuery)
+    //console.log("LWM:"+this.layerWithinMap(this.MinX, this.MaxX, this.MinY, this.MaxY))//ERJ
 	return spatialQuery;
 };
 
@@ -593,7 +596,7 @@ org.OpenGeoPortal.Solr.prototype.layerWithinMap = function layerWithinMap(mapMin
 	layerWithinMap += "map(MaxX," + mapMinX + "," + mapMaxX + ",1,0),";
 	layerWithinMap += "map(MinY," + mapMinY + "," + mapMaxY + ",1,0),";
 	layerWithinMap += "map(MaxY," + mapMinY + "," + mapMaxY + ",1,0))";
-	layerWithinMap += ",4,4,1,0)))";
+	layerWithinMap += ",4,4,1,0))";//ERJ 2 instead of 3 parenthesis
 	layerWithinMap = "_val_:\"" + layerWithinMap + "\"";
 	return layerWithinMap;
 };
@@ -688,21 +691,26 @@ org.OpenGeoPortal.Solr.prototype.layerIntersectsMapAux = function layerIntersect
 
 org.OpenGeoPortal.Solr.prototype.sendToSolr = function sendToSolr(query, successFunction, errorFunction)
 {
+    //console.log("ERJ SOLRQUERY:"+this.getServerName()+"?" + query);
 	var ajaxParams = 
 		{
 			type: "GET",
 			url: this.getServerName() + "?" + query,
+			//url: 'http://libserver4.yale.edu:8983/solr/select/?q=*%3A*&version=2.2&start=0&rows=10&indent=on&wt=json',
 			dataType: 'jsonp',
 			jsonp: 'json.wrf',
 	        //timeout: 5000,
 	        crossDomain: true,
 			success: function(data){
+			        //console.log("AJAXSUCCESS");
 					successFunction(data);
 				},
 			error: function(arg){
+			        //console.log("AJAXERROR:"+JSON.stringify(arg));
 					errorFunction(arg);
 				}
 		};
+	//console.log("arguments.length:"+arguments.length);	
 	if (arguments.length > 3){
 		//4th parameter is context parameter
 		var newContext = arguments[3];
@@ -710,7 +718,8 @@ org.OpenGeoPortal.Solr.prototype.sendToSolr = function sendToSolr(query, success
 		var newSuccessFunction = function(data){successFunction(data, newContext);};
 		ajaxParams.success = newSuccessFunction;
 	}
-	//console.log(this);
+	//console.log("ERJ SOLR OBJECT:"+JSON.stringify(this));
+	//console.log("ERJ AJAX PARAMS:"+JSON.stringify(ajaxParams));
 	jQuery.ajax(ajaxParams);
 };
 
@@ -868,7 +877,6 @@ org.OpenGeoPortal.Solr.prototype.getSearchQuery = function getSearchQuery()
 	if (topicQuery)
 		queryClause = queryClause += "+AND+" + "%28" + topicQuery + "%29";
 	*/
-	
 	queryClause = this.combineQueries(spatialQuery, keywordQuery, topicQuery);
 	
 	
@@ -950,6 +958,7 @@ org.OpenGeoPortal.Solr.prototype.concatWith = function concatWith(originalString
 org.OpenGeoPortal.Solr.prototype.executeSearchQuery = function executeSearchQuery(success, error)
 {
 	var query = this.getSearchQuery();
+	//console.log("QUERY:"+query)//ERJ
 	this.sendToSolr(query, success, error);
 };
 

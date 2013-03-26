@@ -669,7 +669,8 @@ org.OpenGeoPortal.UserInterface.prototype.clearDefault = function(inputFieldName
 };
 
 org.OpenGeoPortal.UserInterface.prototype.searchSubmit = function(){
-	//console.log("searchSubmit");
+    //console.log("searchSubmit");
+    //alert("searchSubmit");//ERJ
 	this.resultsTableObject.searchRequest(0);
 };
 
