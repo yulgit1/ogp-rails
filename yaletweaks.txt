@@ -21,6 +21,13 @@ added to institutionYale.css .site-wrapper
 <link rel="shortcut icon" href="media/yale_favicon_grayscale.ico" />
 10) index.html, changed language to reflect Yale and Stanford in index.html
 
+ingest scripts from original ogp:
+  use /yale_test_files, our fgdc converted to solr doc by Steve McDonald
+  C:\NetBeansProjects\opengeoportal\solr\ingest ssh-> /home/ermadmix/ogp/solr_data
+  http://code.google.com/p/opengeoportal/wiki/Installation
+  ./ingest.sh libserver4.yale.edu:8983 yale_test_files
+  ./commit.sh libserver4.yale.edu:8983
+
 Fix Search button:
 tracing Search button functionality
   layerTable.js
