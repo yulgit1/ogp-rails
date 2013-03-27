@@ -810,6 +810,7 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 	            //Get the data array for this row
 	            var aData = tableObj.fnGetData(tableElement[0]);
 	            //our layer id is being used as the openlayers layer name
+				//console.log("ROW:"+JSON.stringify(aData));//ERJPre
 	            var layerID = aData[this.tableHeadingsObj.getColumnIndex("LayerId")];
       	    	var dataType = aData[this.tableHeadingsObj.getColumnIndex("DataType")];
             	var access = aData[this.tableHeadingsObj.getColumnIndex("Access")];
@@ -858,6 +859,19 @@ org.OpenGeoPortal.LayerTable = function(userDiv, tableName){
 	            		jQuery(thisObj).attr('title', hideLayerText);
 	            		layerState.setState(layerID, {"preview": "on", "dataType": dataType, "wmsName": layerName});
 	            	} else {
+						//ERJ error handling
+					    alert("Not previewable.  layerName:"+layerName+"  title:"+layerID);
+						console.log("institution:"+institution);
+						console.log("layerName:"+layerName);
+						console.log("title:"+layerID);
+						console.log("west:"+minLongitude);
+						console.log("south:"+minLatitude);
+						console.log("east:"+maxLongitude);
+						console.log("north:"+maxLatitude);
+						console.log("dataType:"+dataType);
+						console.log("opacity:"+opacitySetting*.01);
+						console.log("access:"+access);
+						console.log("location:"+JSON.stringify(location));
 	            		throw new Exception("This layer is currently not previewable.");
 	            	}
 	            }

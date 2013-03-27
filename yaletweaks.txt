@@ -50,3 +50,17 @@ development:
   serviceProxyAddress: http://libserver4.yale.edu:8983/solr/
   serviceAddress: http://libserver4.yale.edu:8983
   serviceType: solr
+
+preview layer functionality:
+layerTable.js
+  this.previewLayer = function(thisObj){
+    org.OpenGeoPortal.map.addWMSLayer
+	  did:added console.log of this methods params
+mapDiv.js
+  org.OpenGeoPortal.MapController.prototype.addWMSLayer = function (mapObj) {
+    new OpenLayers.Layer.WMS
+	  http://dev.openlayers.org/docs/files/OpenLayers/Layer/WMS-js.html#OpenLayers.Layer.WMS.OpenLayers.Layer.WMS
+
+checking out rake routes and catalog controller:
+http://libserver4.yale.edu:3000/getMetadata?id=Yale.1001
+http://libserver4.yale.edu:3000/getMetadata.xml?id=Yale.1001
